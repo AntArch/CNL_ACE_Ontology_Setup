@@ -25,8 +25,12 @@ The below is an example of CNL expressed in ACE.
 
 ```CNL
 All men are mortal.
+All women are mortal.
 John is a man.
-What is mortal?
+Anne is a woman.
+No man is a woman.
+No woman is a man.
+Who is mortal?
 
 ```
 
