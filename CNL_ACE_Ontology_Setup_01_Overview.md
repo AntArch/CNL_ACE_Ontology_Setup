@@ -34,9 +34,9 @@ This Socratic sentence is easy to read and understand (whilst the question *What
 
 > John is mortal. 
 
-This is an example of [inference](https://en.wikipedia.org/wiki/Inference). The benefit comes when 
+This is an example of [inference](https://en.wikipedia.org/wiki/Inference). The benefit comes when a computer can come to the same inference. This can be visualized in the [RACE (reasoning engine) web client](http://attempto.ifi.uzh.ch/race/) as demonstrated in the file AutomatedReasoningUsingRACE_whoIsMortal.mp4 in the video folder (put a link onto youtube).
 
-This can be visualized in the [RACE (reasoning engine) web client](http://attempto.ifi.uzh.ch/race/) as demonstrated in the file AutomatedReasoningUsingRACE_whoIsMortal.mp4 in the video folder (put a link onto youtube).
+Further benefits come when moving from inferencing over a small number of facts to inferencing over hundreds, thousands or millions of facts. 
 
 We will use CNL to express short facts about the activities and functions of the business/enterprise. The major benefit for RoS is that these statements can be easily understood by domain experts and challenged. The things I'm looking for is moments where someone says....
 
