@@ -34,7 +34,7 @@ This Socratic sentence is easy to read and understand (whilst the question *What
 
 > John is mortal. 
 
-This is an example of [inference[(https://en.wikipedia.org/wiki/Inference). The benefit comes when 
+This is an example of [inference](https://en.wikipedia.org/wiki/Inference). The benefit comes when 
 
 This can be visualized in the [RACE (reasoning engine) web client](http://attempto.ifi.uzh.ch/race/) as demonstrated in the file AutomatedReasoningUsingRACE_whoIsMortal.mp4 in the video folder (put a link onto youtube).
 
