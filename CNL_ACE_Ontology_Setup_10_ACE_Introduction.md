@@ -62,6 +62,24 @@ To a specific folder
 
 ### copying **to** docker	
 
+# More docker
+
+docker pull tkuhn/acewiki
+docker start tkuhn/acewiki
+docker build tkuhn/acewiki
+docker ps -a
+docker images
+
+## getting a bash shell into docker
+
+docker start <docker instance>
+docker exec -i -t <docker instance> /bin/bash
+
+docker start serene_boyd
+docker exec -i -t serene_boyd /bin/bash
+
+
+
 Some text to use in these services:
 
 ```cnl
