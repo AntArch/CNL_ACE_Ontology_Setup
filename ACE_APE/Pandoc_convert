@@ -1,0 +1,3 @@
+pandoc -s -r html http://attempto.ifi.uzh.ch/site/docs/writing_owl_in_ace.html -o writing_owl_in_ace.md
+
+pandoc -f markdown --latex-engine=xelatex -t latex writing_owl_in_ace.md -o writing_owl_in_ace.pdf

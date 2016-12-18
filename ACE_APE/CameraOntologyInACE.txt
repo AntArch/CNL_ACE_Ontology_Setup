@@ -1,0 +1,335 @@
+sensorcmo152212 is a Sensorcmo.
+
+casio is a Brand.
+
+sensorccd1011Mm is something.
+
+Every Display partOfs exactly 1 Camera.
+
+Every Replaceblelen is a Lens.
+
+Every Telephotolen makes exactly 1 Purchasebleitem.
+
+Every Filmtlrcamera is a Filmcamera.
+
+Every Display makes exactly 1 Purchasebleitem.
+
+Every Manufacturer is something.
+
+casioExilim is something.
+
+pentax is something.
+
+Every Sensorccd is a Sensor.
+
+Every Filmslrcamera makeBies exactly 1 Manufacturer.
+
+Every Brand ownBies exactly 1 Manufacturer.
+
+Every Memorycard makes exactly 1 Purchasebleitem.
+
+Every Filmcompactcamera is something that has at least 1 Display 
+ or that has something that is a Nonreplaceblelen 
+ or that is a Sensor.
+
+Every Lens is a Purchasebleitem.
+
+Every Manufacturer makes exactly 1 Purchasebleitem.
+
+casioComputerCo is something.
+
+displayLcd3 is something.
+
+Everything is makeBied by at most 1 thing.
+
+canonInc is something.
+
+memorycardsd is a Memorycard.
+
+Every Camera is a Purchasebleitem.
+
+Every Digitalcamera is something that has at least 1 Display 
+ or that has something that is a Nonreplaceblelen 
+ or that is a Sensor.
+
+lpE5 is something.
+
+Every Permanentfocuslen makeBies exactly 1 Manufacturer.
+
+Every Normallen makes exactly 1 Purchasebleitem.
+
+Every Wideanglelen is a Permanentfocuslen.
+
+Every Display is something.
+
+Every Filmcompactcamera makes exactly 1 Purchasebleitem.
+
+Every Camera is something that uses at least 1 Battery 
+ or that uses something that is a Memorycard 
+ or that is a Replaceblelen.
+
+Every Filmcompactcamera is something that uses at least 1 Battery 
+ or that uses something that is a Memorycard 
+ or that is a Replaceblelen.
+
+memorycardCf is a Memorycard.
+
+Every Digitalcamera is a Camera.
+
+Every Filmslrcamera is a Filmcamera.
+
+Every Filmtlrcamera is something.
+
+Every Filmcamera is something that uses at least 1 Battery 
+ or that uses something that is a Memorycard 
+ or that is a Replaceblelen.
+
+nikon is a Brand.
+
+Every Digitalcompactcamera is something that has at least 1 Display 
+ or that has something that is a Nonreplaceblelen 
+ or that is a Sensor.
+
+Every Fisheyelen makes exactly 1 Purchasebleitem.
+
+Every Permanentfocuslen makes exactly 1 Purchasebleitem.
+
+pentax is a Brand.
+
+Every Memorycard makeBies exactly 1 Manufacturer.
+
+Every Nonreplaceblelen makeBies exactly 1 Manufacturer.
+
+Every Brand makes exactly 1 Purchasebleitem.
+
+canonInc is a Manufacturer.
+
+lensZoonNikkor is something.
+
+Every Filmtlrcamera makes exactly 1 Purchasebleitem.
+
+Every Zoomlen makes exactly 1 Purchasebleitem.
+
+nikonCorp is a Manufacturer.
+
+Every Filmslrcamera makes exactly 1 Purchasebleitem.
+
+Every Sensorcmo makes exactly 1 Purchasebleitem.
+
+Every Wideanglelen makeBies exactly 1 Manufacturer.
+
+nikon is something.
+
+memorycardMmc is a Memorycard.
+
+Every Macrolen is a Permanentfocuslen.
+
+Every Nonreplaceblelen is a Lens.
+
+memorycardSdhc is something.
+
+aa is a Battery.
+
+displayLcd28 is a Display.
+
+Everything is ownBied by at most 1 thing.
+
+Every Digitalslrcamera is something that has at least 1 Display 
+ or that has something that is a Nonreplaceblelen 
+ or that is a Sensor.
+
+lensZoonNikkor is a Nonreplaceblelen.
+
+Every Digitalslrcamera is something that uses at least 1 Battery 
+ or that uses something that is a Memorycard 
+ or that is a Replaceblelen.
+
+Every Filmtlrcamera is something that has at least 1 Display 
+ or that has something that is a Nonreplaceblelen 
+ or that is a Sensor.
+
+Every Filmslrcamera is something that has at least 1 Display 
+ or that has something that is a Nonreplaceblelen 
+ or that is a Sensor.
+
+Every Sensorccd makes exactly 1 Purchasebleitem.
+
+Every Sensorcmo is a Sensor.
+
+Every Purchasebleitem makeBies exactly 1 Manufacturer.
+
+Every Zoomlen makeBies exactly 1 Manufacturer.
+
+displayLcd3 is a Display.
+
+memorycardMmc is something.
+
+canon is a Brand.
+
+Every Normallen makeBies exactly 1 Manufacturer.
+
+Every Digitalslrcamera is a Digitalcamera.
+
+Every Purchasebleitem makes exactly 1 Purchasebleitem.
+
+Every Digitalslrcamera makes exactly 1 Purchasebleitem.
+
+casioExilim is a Digitalcompactcamera.
+
+Every Telephotolen makeBies exactly 1 Manufacturer.
+
+Every Filmcompactcamera makeBies exactly 1 Manufacturer.
+
+Every Lens makes exactly 1 Purchasebleitem.
+
+Every Digitalcompactcamera is something that uses at least 1 Battery 
+ or that uses something that is a Memorycard 
+ or that is a Replaceblelen.
+
+nikonCorp is something.
+
+Every Memorycard is a Purchasebleitem.
+
+lensExilimOptical is something.
+
+sensorcmo152212 is something.
+
+Every Macrolen makes exactly 1 Purchasebleitem.
+
+Every Digitalcompactcamera makes exactly 1 Purchasebleitem.
+
+Every Battery makeBies exactly 1 Manufacturer.
+
+Every Sensor makes exactly 1 Purchasebleitem.
+
+Every Digitalslrcamera makeBies exactly 1 Manufacturer.
+
+Every Filmcamera is something that has at least 1 Display 
+ or that has something that is a Nonreplaceblelen 
+ or that is a Sensor.
+
+Every Normallen is a Permanentfocuslen.
+
+Every Camera is something that has at least 1 Display 
+ or that has something that is a Nonreplaceblelen 
+ or that is a Sensor.
+
+Every Purchasebleitem is something.
+
+Every Zoomlen is a Replaceblelen.
+
+memorycardMemorystick is a Memorycard.
+
+lensExilimOptical is a Nonreplaceblelen.
+
+Everything makes at most 1 thing.
+
+Every Sensorccd partOfs exactly 1 Camera.
+
+Every Digitalcompactcamera makeBies exactly 1 Manufacturer.
+
+Every Filmcamera is a Camera.
+
+canonPowershotS101S is something.
+
+Every Fisheyelen is a Permanentfocuslen.
+
+hoyaCorp is something.
+
+memorycardCf is something.
+
+Every Lens makeBies exactly 1 Manufacturer.
+
+Every Camera makes exactly 1 Purchasebleitem.
+
+Every Permanentfocuslen is a Lens.
+
+sensorccd1011Mm is a Sensorccd.
+
+Every Digitalcompactcamera is a Digitalcamera.
+
+canonPowershotS101S is a Digitalcompactcamera.
+
+Every Filmtlrcamera is something that uses at least 1 Battery 
+ or that uses something that is a Memorycard 
+ or that is a Replaceblelen.
+
+hoyaCorp is a Manufacturer.
+
+Everything owns at most 1 thing.
+
+Every Wideanglelen makes exactly 1 Purchasebleitem.
+
+Every Sensorcmo partOfs exactly 1 Camera.
+
+Every Filmcamera makes exactly 1 Purchasebleitem.
+
+Every Digitalcamera makes exactly 1 Purchasebleitem.
+
+memorycardsdhc is a Memorycard.
+
+Every Battery makes exactly 1 Purchasebleitem.
+
+aa is something.
+
+Every Digitalcamera is something that uses at least 1 Battery 
+ or that uses something that is a Memorycard 
+ or that is a Replaceblelen.
+
+Every Camera makeBies exactly 1 Manufacturer.
+
+displayLcd28 is something.
+
+canonEf28 is a Zoomlen.
+
+Every Replaceblelen makeBies exactly 1 Manufacturer.
+
+memorycardsd is something.
+
+Every Digitalcamera makeBies exactly 1 Manufacturer.
+
+canonEo450D is a Digitalslrcamera.
+
+canon is something.
+
+casio is something.
+
+Every Nonreplaceblelen partOfs exactly 1 Camera.
+
+Every Macrolen makeBies exactly 1 Manufacturer.
+
+lpE5 is a Battery.
+
+Every Filmcompactcamera is a Filmcamera.
+
+Every Filmtlrcamera makeBies exactly 1 Manufacturer.
+
+canonEf28 is something.
+
+Every Telephotolen is a Permanentfocuslen.
+
+Every Nonreplaceblelen makes exactly 1 Purchasebleitem.
+
+memorycardMemorystick is something.
+
+casioComputerCo is a Manufacturer.
+
+Every Fisheyelen makeBies exactly 1 Manufacturer.
+
+Every Filmslrcamera is something that uses at least 1 Battery 
+ or that uses something that is a Memorycard 
+ or that is a Replaceblelen.
+
+Every Replaceblelen makes exactly 1 Purchasebleitem.
+
+Every Brand is something.
+
+Every Sensor is something.
+
+Every Manufacturer owns exactly 1 Brand.
+
+canonEo450D is something.
+
+Every Battery is a Purchasebleitem.
+
+Every Filmcamera makeBies exactly 1 Manufacturer.

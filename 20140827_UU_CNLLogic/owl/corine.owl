@@ -1,0 +1,2967 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://harmonisa.uni-klu.ac.at/ontology/corine.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:harmonisa="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xml:base="http://harmonisa.uni-klu.ac.at/ontology/corine.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The corine.owl ontology describes the land-use and land-cover concepts from the CORINE European Land-cover catalogue.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:ID="CoastalLagoons">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=521;type=data</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoastalForm"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLagoonCoastalForm"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLagoonCoastalForm"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoastalForm"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Coastal lagoons</rdfs:label>
+    <rdfs:label xml:lang="de">Lagunen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="RoadAndRailNetworksAndAssociatedLand">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Road and rail networks and associated land</rdfs:label>
+    <rdfs:label xml:lang="de">Stra&amp;szlig;en/Eisenbahnnetze, funktionell zugeordnete Fl&amp;auml;chen</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=122;type=data</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#RailBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#RoadBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#RailBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#RoadBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportationSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportationSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="ArtificialNonAgriculturalVegetatedAreas">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">K&amp;uuml;nstlich angelegte nicht landwirtschaftlich genutzte Fl&amp;auml;chen{de}</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GreenAreaSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=14;type=meta</rdfs:comment>
+    <rdfs:label xml:lang="en">Artificial non-agricultural vegetated areas</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Water">
+    <rdfs:label xml:lang="en">Water bodies</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">Wasserfl&amp;auml;chen</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=5;type=meta</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="SparselyVegetatedAreas">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSecondaryVegetation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Vegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Vegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSecondaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">Fl&amp;auml;chen mit sp&amp;auml;rlicher Vegetation</rdfs:label>
+    <rdfs:label xml:lang="en">Sparsely vegetated areas</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=333;type=data</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ArableLand">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArableUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AnnualCropRotation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=21;type=meta</rdfs:comment>
+    <rdfs:label xml:lang="en">Arable land</rdfs:label>
+    <rdfs:label xml:lang="de">Ackerfl&amp;auml;chen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Airports">
+    <rdfs:label xml:lang="en">Airports</rdfs:label>
+    <rdfs:label xml:lang="de">Flugh&amp;auml;fen</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AirportBuilding"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AirportBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportationSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportationSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=124;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NonIrrigatedArableLand">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=211;type=data</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#NoIrrigation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasIrrigation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasIrrigation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#NoIrrigation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArableUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArableUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AnnualCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AnnualCropRotation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Non-irrigated arable land</rdfs:label>
+    <rdfs:label xml:lang="de">Nicht bew&amp;auml;ssertes Ackerland</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OliveGroves">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OliveCrop"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCrop"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCrop"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OliveCrop"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentCropRotation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Olive groves</rdfs:label>
+    <rdfs:label xml:lang="de">Olivenhaine</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=223;type=data</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ContinuousUrbanFabric">
+    <rdfs:label xml:lang="de">Durchg&amp;auml;ngige st&amp;auml;dtische Pr&amp;auml;gung</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Building"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Building"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasContinuity"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ContinuousContinuity"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasContinuity"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ContinuousContinuity"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#UrbanLocation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#UrbanLocation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Continuous urban fabric</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=111;type=data</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="BurntAreas">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=334;type=data</rdfs:comment>
+    <rdfs:label xml:lang="de">Brandfl&amp;auml;chen</rdfs:label>
+    <rdfs:label xml:lang="en">Burnt areas</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BurntAreasOpenSpaceType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasOpenSpaceType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasOpenSpaceType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BurntAreasOpenSpaceType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AnnualCropsAssociatedWithPermanentCrops">
+    <rdfs:label xml:lang="de">Einj&amp;auml;hrige Kulturen in Verbindung mit Dauerkulturen</rdfs:label>
+    <rdfs:label xml:lang="en">Annual crops associated with permanent crops</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=241;type=data</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeterogeneousCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeterogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AnnualCropRotation"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentCropRotation"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AnnualCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentCropRotation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="DiscontinuousUrbanFabric">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Building"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Building"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasContinuity"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#DiscontinuousContinuity"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#DiscontinuousContinuity"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasContinuity"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#UrbanLocation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#UrbanLocation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">Nicht durchg&amp;auml;ngig st&amp;auml;dtische Pr&amp;auml;gung</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Discontinuous urban fabric</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=112;type=data</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="BroadLeavedForest">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BroadLeafedVegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BroadLeafedVegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Broad-leafed forest</rdfs:label>
+    <rdfs:label xml:lang="de">Laubw&amp;auml;lder</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=311;type=data</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="NaturalGrasslands">
+    <rdfs:label xml:lang="en">Natural graslands</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GrassVegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GrassVegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">Nat&amp;uuml;rliches Gr&amp;uuml;nland</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=321;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PermanentlyIrrigatedLand">
+    <rdfs:label xml:lang="en">Permanently irrigated land</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=212;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">Regelm&amp;auml;&amp;szlig;ig bew&amp;auml;ssertes Ackerland</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasIrrigation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentIrrigation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasIrrigation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentIrrigation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArableUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArableUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AnnualCropRotation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AnnualCropRotation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Salines">
+    <rdfs:label xml:lang="en">Salines</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=422;type=data</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SalineBuilding"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SalineBuilding"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">Salinen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CoastalWetlands">
+    <rdfs:label xml:lang="de">Feuchtfl&amp;auml;chen an der K&amp;uuml;ste</rdfs:label>
+    <rdfs:label xml:lang="en">Coastal wetlands</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=42;type=meta</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="AgriculturalAreas">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Agricultural areas</rdfs:label>
+    <rdfs:label xml:lang="de">Landwirtschaft</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=2;type=meta</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Vineyards">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=221;type=data</rdfs:comment>
+    <rdfs:label xml:lang="en">Vineyards</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCrop"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GrapeCrop"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCrop"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GrapeCrop"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">Weinbaufl&amp;auml;chen</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Forests">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TreeVegetation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=31;type=meta</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">W&amp;auml;lder</rdfs:label>
+    <rdfs:label xml:lang="en">Forests</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PermanentCrops">
+    <rdfs:label xml:lang="de">Dauerkulturen</rdfs:label>
+    <rdfs:label xml:lang="en">Permanent crops</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=22;type=meta</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ComplexCultivationPatterns">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Complex cultivation patterns</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=242;type=data</rdfs:comment>
+    <rdfs:label xml:lang="de">Komplexe Parzellenstruktur</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HousingBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GardenBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HousingBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GardenBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeterogeneousCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeterogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSecondaryUse"/>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HousingUse"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#RecreationalUse"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HousingUse"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#RecreationalUse"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSecondaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="MoorsAndHeathland">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=322;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeathVegetation"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ShrubVegetation"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeathVegetation"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ShrubVegetation"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MoorWetlandType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWetlandType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWetlandType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MoorWetlandType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">Heiden und Moorheiden</rdfs:label>
+    <rdfs:label xml:lang="en">Moors and heathland</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="AgroForestryArea">
+    <rdfs:label xml:lang="de">Land/Forstwirtschaftliche Fl&amp;auml;chen</rdfs:label>
+    <rdfs:label xml:lang="en">Agro-forestry areas</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=244;type=data</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PastureUse"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PastureUse"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TreeVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TreeVegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeterogeneousCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeterogeneousCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="DumpSites">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#DumpSiteBuilding"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#DumpSiteBuilding"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IndustrialUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IndustrialUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=132;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">Deponien, Abraumhalden</rdfs:label>
+    <rdfs:label xml:lang="en">Dump sites</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="MineDumpAndConstructionSites">
+    <rdfs:label xml:lang="en">Mine, dump and construction sites</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#DumpSiteBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MiningBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ConstructionSiteBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=13;type=meta</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">Abbaufl&amp;auml;chen, Deponien, Baustellen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ConstructionSites">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=133;type=data</rdfs:comment>
+    <rdfs:label xml:lang="en">Construction sites</rdfs:label>
+    <rdfs:label xml:lang="de">Baustellen</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ConstructionSiteBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ConstructionSiteBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="HeterogeneousAgriculturalAreas">
+    <rdfs:label xml:lang="de">Heterogene landwirtschaftliche Fl&amp;auml;chen</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeterogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=24;type=meta</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Heterogeneous agricultural areas</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="BareRocks">
+    <rdfs:label xml:lang="de">Felsfl&amp;auml;chen ohne Vegetation</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=332;type=data</rdfs:comment>
+    <rdfs:label xml:lang="en">Bare rocks</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BareRocksOpenSpaceType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasOpenSpaceType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasOpenSpaceType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BareRocksOpenSpaceType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GlaciersAndPerpetualSnow">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=335;type=data</rdfs:comment>
+    <rdfs:label xml:lang="de">Gletscher/Dauerschneegebiet</rdfs:label>
+    <rdfs:label xml:lang="en">Glaciers and perpetual snow</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PerpetualSnowOpenSpaceType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasOpenSpaceType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PerpetualSnowOpenSpaceType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasOpenSpaceType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPerpetualSnowType"/>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GlacierPerpetualSnowType"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PerpetualSnowPerpetualSnowType"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPerpetualSnowType"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GlacierPerpetualSnowType"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PerpetualSnowPerpetualSnowType"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SeaAndOcean">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=523;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Sea and ocean</rdfs:label>
+    <rdfs:label xml:lang="de">Meer und Ozean</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MarineLocationRelativeToSea"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MarineLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="MarineWaters">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">Meeresgew&amp;auml;sser</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MarineLocationRelativeToSea"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Marine waters</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=52;type=meta</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ConiferousForest">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ConiferousVegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ConiferousVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=312;type=data</rdfs:comment>
+    <rdfs:label xml:lang="de">Nadelw&amp;auml;lder</rdfs:label>
+    <rdfs:label xml:lang="en">Coniferous forest</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="LandPrincipallyOccupiedByAgricultureWithSignificantAreasOfNaturalVegetation">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Land principally occupied by agriculture, with significant areas of natural vegetation</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=243;type=data</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSecondaryVegetation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Vegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Vegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSecondaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeterogeneousCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HeterogeneousCoverage"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">Landwirtschaftlich genutztes Land mit Fl&amp;auml;chen nat&amp;uuml;rlicher Vegetation von signifikanter Gr&amp;ouml;&amp;szlig;e</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Pastures">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=231;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">Wiesen und Weiden</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PastureUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PastureUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Pastures</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PortAreas">
+    <rdfs:label xml:lang="en">Port areas</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=123;type=data</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PortBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PortBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportationSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportationSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">Hafengebiete</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="UrbanFabric">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=11;type=meta</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#UrbanLocation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">St&amp;auml;dtisch gepr&amp;auml;gte Fl&amp;auml;chen</rdfs:label>
+    <rdfs:label xml:lang="en">Urban fabric</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="GreenUrbanAreas">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=141;type=data</rdfs:comment>
+    <rdfs:label xml:lang="en">Green urban areas</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ParkBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GardenBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CemeteryBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ParkBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GardenBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CemeteryBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#UrbanLocation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#UrbanLocation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#LeisureUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#LeisureUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GreenAreaSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GreenAreaSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">St&amp;auml;dtische Gr&amp;uuml;nfl&amp;auml;chen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="TransitionalWoodlandShrub">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ShrubVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ShrubVegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSecondaryVegetation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TreeVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSecondaryVegetation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TreeVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=324;type=data</rdfs:comment>
+    <rdfs:label xml:lang="en">Transitional woodland shrub</rdfs:label>
+    <rdfs:label xml:lang="de">Wald/Strauch &amp;Uuml;bergangsstadien</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Estuaries">
+    <rdfs:label xml:lang="de">M&amp;uuml;ndungsgebiete</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#EstuaryCoastalForm"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoastalForm"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoastalForm"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#EstuaryCoastalForm"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=522;type=data</rdfs:comment>
+    <rdfs:label xml:lang="en">Estuaries</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="OpenSpacesWithLittleOrNoVegetation">
+    <rdfs:label xml:lang="de">Offene Fl&amp;auml;chen ohne oder mit geringer Vegetation</rdfs:label>
+    <rdfs:label xml:lang="en">Open spaces with little or no vegetation</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=33;type=meta</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CorineArea">
+    <rdfs:label xml:lang="de">Corine Gebiet</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Surface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Corine area</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >type=meta</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="InlandWetlands">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#InlandLocationRelativeToSea"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Inland wetlands</rdfs:label>
+    <rdfs:label xml:lang="de">Feuchtfl&amp;auml;chen im Landesinneren</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=41;type=meta</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="RiceFields">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentIrrigation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasIrrigation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasIrrigation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentIrrigation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArableUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArableUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCrop"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#RiceCrop"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#RiceCrop"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCrop"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AnnualCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AnnualCropRotation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Rice fields</rdfs:label>
+    <rdfs:label xml:lang="de">Reisfelder</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=213;type=data</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="MineralExtractionSites">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Mineral extraction sites</rdfs:label>
+    <rdfs:label xml:lang="de">Abbaufl&amp;auml;chen</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MiningBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MiningBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IndustrialUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IndustrialUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=131;type=data</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="PeatBogs">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#InlandLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#InlandLocationRelativeToSea"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FreshWaterType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FreshWaterType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PeatBogWetlandType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWetlandType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWetlandType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PeatBogWetlandType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Peatbogs</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=412;type=data</rdfs:comment>
+    <rdfs:label xml:lang="de">Torfmoore</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="SaltMarshes">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWetlandType"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MarshWetlandType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWetlandType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MarshWetlandType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Salt marshes</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=421;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">Salzwiesen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="IndustrialOrCommercialUnits">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Industrial or commercial units</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IndustrialBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CommercialBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IndustrialBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CommercialBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IndustrialUse"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CommercialUse"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IndustrialUse"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CommercialUse"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=121;type=data</rdfs:comment>
+    <rdfs:label xml:lang="de">Industrie/Gewerbefl&amp;auml;chen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="SclerophyllousVegetation">
+    <rdfs:label xml:lang="de">Hartlaubbewuchs</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SclerophyllousScrubVegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SclerophyllousScrubVegetation"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=323;type=data</rdfs:comment>
+    <rdfs:label xml:lang="en">Sclerophyllous vegetation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="WaterCourses">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Water courses</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#InlandLocationRelativeToSea"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#InlandLocationRelativeToSea"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FlowingWaterSpeed"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterSpeed"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FlowingWaterSpeed"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterSpeed"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FreshWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FreshWaterType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=511;type=data</rdfs:comment>
+    <rdfs:label xml:lang="de">Gew&amp;auml;sserl&amp;auml;ufe</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="InlandMarshes">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#InlandLocationRelativeToSea"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#InlandLocationRelativeToSea"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FreshWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FreshWaterType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWetlandType"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MarshWetlandType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#MarshWetlandType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWetlandType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=411;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">S&amp;uuml;mpfe</rdfs:label>
+    <rdfs:label xml:lang="en">Inland marshes</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="FruitTreesAndBerryPlantations">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=222;type=data</rdfs:comment>
+    <rdfs:label xml:lang="en">Fruit trees and berry plantations</rdfs:label>
+    <rdfs:label xml:lang="de">Obst/Beerenobstbest&amp;auml;nde</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#HomogeneousCoverage"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCoverage"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCrop"/>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FruitCrop"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BerryCrop"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FruitCrop"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BerryCrop"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCrop"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasCropRotation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#PermanentCropRotation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CropUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#AgriculturalSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="ScrubAndOrHerbaceousVegetationAssociations">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=32;type=meta</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">Kraut/Strauchvegetation</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ScrubVegetation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Scrub and/or herbaceous vegetation association</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="IntertidalFlats">
+    <rdfs:label xml:lang="de">In der Gezeitenzone liegende Fl&amp;auml;chen</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CoastalLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SaltWaterType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IntertidalFlatWetlandType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWetlandType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IntertidalFlatWetlandType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWetlandType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Intertidal flats</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=423;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ForestAndSemiNaturalAreas">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=3;type=meta</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Forests and semi-natural areas</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">W&amp;auml;lder und naturnahe Fl&amp;auml;chen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="InlandWaters">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=51;type=meta</rdfs:comment>
+    <rdfs:label xml:lang="en">Inland waters</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#InlandLocationRelativeToSea"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">Wasserfl&amp;auml;chen im Landesinneren</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Wetlands">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=4;type=meta</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WetlandSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Wetlands</rdfs:label>
+    <rdfs:label xml:lang="de">Feuchtfl&amp;auml;chen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ArtificialSurfaces">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Artificial surfaces</rdfs:label>
+    <rdfs:label xml:lang="de">Bebaute Fl&amp;auml;che</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=1;type=meta</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="BeachesDunesSands">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasOpenSpaceType"/>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BeachesOpenSpaceType"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#DunesOpenSpaceType"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SandsOpenSpaceType"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BeachesOpenSpaceType"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#DunesOpenSpaceType"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SandsOpenSpaceType"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasOpenSpaceType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#OpenSpaceSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="de">Str&amp;auml;nde, D&amp;uuml;nen, Sandfl&amp;auml;chen</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=331;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="en">Beaches, dunes and sand plains</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="MixedForest">
+    <rdfs:label xml:lang="de">Mischw&amp;auml;lder</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BroadLeafedVegetation"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ConiferousVegetation"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#BroadLeafedVegetation"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#VegetationSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryVegetation"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ConiferousVegetation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=313;type=data</rdfs:comment>
+    <rdfs:label xml:lang="en">Mixed forest</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="IndustrialCommercialAndTransportUnits">
+    <rdfs:label xml:lang="en">Industrial, commercial and transport units</rdfs:label>
+    <rdfs:label xml:lang="de">Industrie-, Gewerbe- und Verkehrsfl&amp;auml;chen</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=12;type=meta</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#ArtificialSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#IndustrialUse"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CommercialUse"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#TransportUse"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SportAndLeisureFacilities">
+    <rdfs:label xml:lang="en">Sport and leisure facilities</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SportBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#LeisureBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SportBuilding"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#LeisureBuilding"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasBuilding"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SportUse"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#LeisureUse"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#SportUse"/>
+                  <rdf:Description rdf:about="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#LeisureUse"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasPrimaryUse"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GreenAreaSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#GreenAreaSurface"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=142;type=data</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:label xml:lang="de">Sport/Freizeitanlagen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="WaterBodies">
+    <rdfs:subClassOf rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#Area"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >id=512;type=data</rdfs:comment>
+    <rdfs:label xml:lang="de">Wasserfl&amp;auml;chen</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#InlandLocationRelativeToSea"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasLocationRelativeToSea"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#InlandLocationRelativeToSea"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#CorineSource"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSource"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#WaterSurface"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasSurface"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#StandingWaterSpeed"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterSpeed"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterSpeed"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#StandingWaterSpeed"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FreshWaterType"/>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#hasWaterType"/>
+            <owl:someValuesFrom rdf:resource="http://harmonisa.uni-klu.ac.at/ontology/skeleton.owl#FreshWaterType"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:label xml:lang="en">Water bodies</rdfs:label>
+  </owl:Class>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 2.2, Build 322)  http://protege.stanford.edu -->

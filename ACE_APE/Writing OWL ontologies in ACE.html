@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0060)http://attempto.ifi.uzh.ch/site/docs/writing_owl_in_ace.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Writing OWL ontologies in ACE</title>
+<meta name="Author" content="Kaarel Kaljurand">
+
+<link rel="stylesheet" title="default" href="./Writing OWL ontologies in ACE_files/ace.css" media="screen" type="text/css">
+
+
+<script type="text/javascript" src="./Writing OWL ontologies in ACE_files/toc.js"></script>
+
+<script type="text/javascript" src="data:text/javascript;base64,d2luZG93LkdyZWVuVHVydGxlT3B0aW9ucyA9IHsgbWljcm9kYXRhRW5hYmxlZDogZmFsc2UgfTs="></script><script type="text/javascript" src="chrome-extension://loggcajcfkpdeoaeihclldihfefijjam/RDFa.js"></script></head>
+
+<body onload="toc(1, false)">
+
+<h1>Writing OWL ontologies in ACE</h1>
+
+<!--
+<pre id="toc">
+</pre>
+-->
+
+<h2>1 <a name="Introduction">Introduction</a></h2>
+
+<p>This document describes how to write
+<a href="http://www.w3.org/TR/owl2-overview/">OWL</a> ontologies in Attempto
+Controlled English (ACE).</p>
+
+<p>To begin, here are some simple statements
+that are usually found in ontologies. The ACE representation is contrasted
+with a "formal language" representation that is normally used in
+such ontologies. Our work intends to show that natural language,
+if carefully controlled, provides a more readable and writable ontology
+representation, without a loss in generality and expressive power.</p>
+
+<table>
+<thead>
+<tr><td>ACE</td><td>Formal language</td></tr>
+</thead>
+<tbody>
+<tr><td>Every man is a human.</td><td>man &#8838; human</td></tr>
+<tr><td>Every human is a male or is a female.</td><td>human &#8838; male &#8746; female</td></tr>
+<tr><td>John is a student and Mary is a student.</td><td>{John, Mary} &#8838; student</td></tr>
+<tr><td>No dog is a cat.</td><td>dog &#8838; ¬ cat</td></tr>
+<tr><td>Every driver owns a car.</td><td>driver &#8838; &#8707; own car</td></tr>
+<tr><td>Everything that a goat eats is some grass.</td><td>goat &#8838; &#8704; eat grass</td></tr>
+<tr><td>John likes Mary.</td><td>&lt;John, Mary&gt; &#8712; like</td></tr>
+<tr><td>Everybody who loves somebody likes him/her.</td><td>love(X, Y) &#8658; like(X, Y)</td></tr>
+</tbody>
+</table>
+
+<p>Not all ACE constructions map nicely to OWL.
+Therefore, we describe only a subset of ACE.
+This subset does not contain
+adjectives, adverbs and prepositional phrases;
+intransitive and ditransitive verbs; queries and imperative
+constructions; modality and sentence subordination; and negation as failure.</p>
+
+<p>The following  OWL constructions are currently not supported by the ACE-to-OWL mapping.</p>
+
+<ul>
+<li>All meta elements, such as imports, versioning, annotations, etc.</li>
+
+<li>IRIs and namespaces. One cannot refer to concepts
+already (partly) defined in other ontologies.</li>
+
+<li>Data-valued properties are only partly supported, e.g. one can use only
+integers and strings as data values, and cannot define
+the domain and range of data-valued properties.</li>
+</ul>
+
+<p>Note that some OWL elements will never be supported, because they are
+just syntactic sugar and have furthermore no clear ACE counterparts.</p>
+
+<p>The following text is structured to separately discuss the three main
+building blocks of ontologies as used in OWL: individuals, classes and properties.</p>
+
+<h2>2 <a name="Individuals">Individuals</a></h2>
+
+<p>One can talk about individuals, classify them and describe
+relations between them. For example,</p>
+
+<pre>There is a man. The man is John.
+His age is 32 and he likes Mary.
+Mary loves herself.
+Bill sees something.
+John is not Bill.
+</pre>
+
+<p>The following graph visualizes the model described by the story, with
+individuals (denoted by ellipses),
+their belonging to classes (boxes with labels),
+properties (solid arrows with labels),
+equality (dashed line) and
+difference (red line). Data-values are in a box with dotted border.
+In case the name of an individual is know then it is written into the ellips.</p>
+
+<div>
+<img src="./Writing OWL ontologies in ACE_files/john_bill_mary.png" alt="Picture. Representation of
+individuals as a Venn diagram." title="Individuals and their relations.">
+</div>
+
+<p>OWL does not make a unique name assumption,
+i.e. an individual can have different names
+and one has to explicitly state the equivalence or difference
+of two differently named individuals. Therefore,
+whether Mary is John or is Bill or is different from
+both of them, is still open, we only know
+that John is not Bill. The fact that John belongs to the class <em>man</em>
+is not explicit in the picture, but can be derived by simple reasoning.
+Note also that John, Mary, Bill and the thing that Bill sees, all
+belong to the topmost class <em>owl:Thing</em>.</p>
+
+<p>One can also classify the individuals by complex class descriptions, e.g.</p>
+
+<ul>
+	<li>John is not a woman. (i.e. <em>John</em> belongs to the complement of
+	the class <em>woman</em>)</li>
+	<li>John is a programmer or is a manager. (i.e. <em>John</em> belongs to the union
+of classes <em>programmer</em> and <em>manager</em>)</li>
+</ul>
+
+
+<h2>3 <a name="Classes">Classes</a></h2>
+
+<p>One can describe classes by specifying relations to other classes. Such
+relations can be a simple inheritance from a named class ("Every man
+is a human.")
+or more complex property restrictions
+("Every driver owns a car."). In OWL,
+the classes do not need names, they can be abstract descriptions, e.g.
+"(Every) man who owns a dog ...". Such descriptions can be made arbitrarily
+complex by negation (<em>no</em>, <em>is not</em>, <em>does not</em>),
+disjunction (<em>or</em>, <em>or that</em>) and conjunction (<em>and</em>,
+<em>that</em>, <em>and that</em>).</p>
+
+<p>Both the <em>every</em>-sentences ("Every man who has
+a driving-license drives a car.") and the <em>if-then</em> sentences ("If a man
+has a driving-license then he drives a car.") can be used.
+The <em>if-then</em> sentences are more flexible in the way the verbs can refer to
+existing nouns via anaphoric references (pronouns, variables, and definite noun
+phrases). However, it is often the case that OWL cannot express this
+kind of argument sharing between verbs. Therefore, it is a good idea to only
+use <em>every</em>-sentences and avoid all kinds of anaphoric references to nouns
+occurring in the same sentence.</p>
+
+<pre>Every man is a human. (man &#8838; human)
+If there is a man then the man is a human. (man &#8838; human)
+Every professor is a scientist and is a teacher. (professor &#8838; scientist &#8745; teacher)
+Everybody who is not a child is an adult. (owl:Thing &#8745; ¬ child &#8838; adult)
+</pre>
+
+<p>Equality of classes has to be spelled out, there is no shorthand
+construction like OWL's <em>EquivalentClasses</em>.</p>
+
+<pre>Every carnivore is a meat-eater and every meat-eater is a carnivore.
+</pre>
+
+<p>Disjointness of classes can be expressed via ACE's negation
+which maps to OWL's <em>ComplementOf</em>.</p>
+
+<pre>Every man is not a woman. (man &#8838; ¬ woman)
+No man is a woman. (man &#8838; ¬ woman)
+Nothing is a man and is a woman. (owl:Thing &#8838; ¬ (man &#8745; woman))
+</pre>
+
+<p>Transitive verbs and adjectives introduce the
+<em>SomeValuesFrom</em> restriction.</p>
+
+<pre>Every man who knows a publisher writes a book. (man &#8745; &#8707; know publisher &#8838; &#8707; write book)
+Every man likes a dog or likes a cat. (man &#8838; (&#8707; like dog) &#8746; (&#8707; like cat))
+If there is a woman then she does not like a snake. (woman &#8838; ¬ &#8707; like snake)
+</pre>
+
+
+<p>OWL's <em>AllValuesFrom</em> constraint
+e.g. that carnivores eat only meat (if they eat at all),
+can be expressed by double negation.
+Let's say we want to express that carnivores and meat-eaters are equivalent
+concepts (i.e. that <code>carnivore = &#8704; eat meat</code>).</p>
+
+<pre>No carnivore eats something that is not a meat.
+Everybody that doesn't eat something that is not a meat is a carnivore.
+</pre>
+
+<p>There is also a shorter ACE syntax
+for some patterns of <em>AllValuesFrom</em>
+(i.e. where <em>AllValuesFrom</em>
+is on the right side of the subsumption sign).</p>
+
+<pre>Everything that a carnivore eats is a meat. (&#8707; inv(eat) carnivore &#8838; meat)
+Everything that is eaten by a carnivore is a meat. # the same using passive
+</pre>
+
+
+<p>Classes can also be described in terms of a property and its cardinality.
+(Note that the plural of `thing' will be mapped to <em>owl:Thing</em>.)</p>
+
+<pre>Every woman likes more than 2 things. (woman &#8838; &gt;= 3 like owl:Thing)
+Every millionaire owns at least 2 cars. (millionaire &#8838; &gt;= 2 own car)
+</pre>
+
+<p>Reflexive pronouns (`itself', `himself', `herself') can be used to describe
+(ir)reflexivity.</p>
+
+<pre>Every narcissist likes himself.
+No river flows-into itself.
+</pre>
+
+
+<p>Classes can also be described in terms of a property and its value that is
+either an individual or data-value.
+This corresponds to OWL's <em>HasValue</em> construct.
+For individual-valued properties, one must use
+a transitive verb (or adjective) with an object that is a proper name or
+a reference to an individual that has already been introduced.</p>
+
+<pre>Every man knows John. (man &#8838; &#8707; know {John})
+There is a woman who everybody likes. (w &#8712; woman; owl:Thing &#8838; &#8707; like {w})
+John likes every dog. (dog &#8838; &#8707; inv(like) {John})
+Every dog is liked by John. # the same using passive
+</pre>
+
+<p>For data-valued properties, ACE makes use of the copula verb `is',
+a genitive construction (Saxon Genitive, possessive pronoun
+or an <em>of</em>-construct), a noun which expresses the property, and
+finally a number or a string. For example</p>
+
+<pre>Everybody whose age is 32 is a grown-up.
+If there is a man who lives-in Paris then the man's address is "Paris". 
+For all water it is false that the temperature of the water is -1.
+</pre>
+
+<p>where the
+genitive construction is expressed by `whose', `man's', `of the water', the
+property is expressed by `age', `address', `temperature', and the data-value is
+`32', `"Paris"' and `-1'.</p>
+
+<!--
+<p>General class descriptions are almost impossible to
+visualize. That's why there is no picture...</p>
+-->
+
+
+<h2>4 <a name="Properties">Properties</a></h2>
+
+<p>OWL properties correspond to ACE's verbs and
+transitive adjectives (e.g. `taller than').</p>
+
+<p>A superproperty for a given property can be defined as:</p>
+
+<pre>Everybody who loves somebody likes him/her.
+</pre>
+
+<p>or in a more verbose manner:</p>
+
+<pre>If there is somebody X and X loves somebody Y then X likes Y.
+</pre>
+
+
+<p>Disjointness of properties can be declared by using negation.</p>
+
+<pre>Nobody who likes somebody hates him/her.
+</pre>
+
+<p>or more verbosely:</p>
+
+<pre>If somebody X likes somebody Y then it is false that X hates Y.
+</pre>
+
+
+<p>Property chaining is a complex mathematical concept that does not have
+a simple verbalization in natural language.
+E.g. the transitivity of a property is formulated in ACE in the following
+ways (different levels of syntactic compactness are provided):</p>
+
+<pre>If something X is taller than something Y and Y is taller than something Z
+    then X is taller than Z.
+
+If something X is taller than something that is taller than something Y
+    then X is taller than Y.
+</pre>
+
+<!--
+Everything that is taller than something that is taller than something
+    is taller than it.
+-->
+
+<p>To declare an inverse property of a property, two sentences are needed.</p>
+
+<pre>If something X is taller than something Y then Y is shorter than X.
+If something X is shorter than something Y then Y is taller than X.
+</pre>
+
+
+<p>The rest of the syntax that OWL provides for describing properties is
+just syntactic sugar, one can use the already described
+class relations, cardinality constraints and inverse properties instead.</p>
+
+<p>Properties can have a domain and a range. The domain of a property
+can be expressed e.g. by</p>
+
+<pre>Everybody who writes something is a human.
+</pre>
+
+
+<p>The range of a property can be expressed by:</p>
+
+<pre>Everything that somebody writes is a book or is a paper.
+Everything that is written by somebody is a book or is a paper. # the same using passive
+</pre>
+
+
+<p>Properties can be functional and inverse functional. Functionality
+means that for a given subject, the object of the property (verb) is always the same.
+Inverse functionality means that for a given object the subject must always
+be the same. For functionality, one has to restrict the class <em>owl:Thing</em>
+to have at most one
+value for a given property (it is OK to have no values at all).</p>
+
+<pre>Everybody orders at most one thing. (owl:Thing &#8838; &lt;= 1 order owl:Thing)
+</pre>
+
+
+<p>Inverse functional properties are expressed by switching the subject
+and the object of the verb.</p>
+
+<pre>Everything is something that at most one thing orders. (owl:Thing &#8838; &lt;= 1 inv(order) owl:Thing)
+Everything is ordered by at most one thing. # using passive
+</pre>
+<!--
+If there is something X then at most 1 thing orders X.
+If there is something then at most 1 thing orders it.
+For every thing at most 1 thing orders it.
+-->
+
+
+<p>Symmetric property is its own inverse. The various ACE syntaxes
+to express this are:</p>
+
+<pre>If somebody X loves somebody Y then Y loves X.
+Everybody who is loved by somebody loves him/her.
+Everybody who somebody loves loves him/her.
+</pre>
+
+
+<p>Equivalent properties are expressed by declaring
+the two properties to be superproperties of each other.</p>
+
+<pre>Everybody who hates somebody despises him/her.
+Everybody who despises somebody hates him/her.
+</pre>
+
+
+<h2>5 <a name="Reasoning">Reasoning</a></h2>
+
+<p>User acceptance of the reasoning results obtained on the OWL level and
+perceived on the ACE level provides the basis for proving that the mapping
+from ACE to OWL is useful. Given the ACE text</p>
+
+<pre>John is a man.
+No man is a woman.
+John is a woman.
+</pre>
+
+<p>the reasoner will find an inconsistency
+because John has been asserted as a man and men have been described
+as disjoint from women.</p>
+
+<p>Here is another example.</p>
+
+<pre>Every child is a man or is a woman.
+No child is a man.
+No child is a woman.
+</pre>
+
+<p>This text may seem strange, but it is not inconsistent, as far as OWL
+is concerned.
+All we have done, is constructed an empty class <em>child</em>,
+which is perfectly legal
+(one can say, though, that the class <em>child</em> is unsatisfiable).
+Only when we claim that there are elements
+(individuals) in this class,
+for instance by stating</p>
+
+<pre>John sees a child. 
+</pre>
+
+<p>do we end up being inconsistent.</p>
+
+
+<p>Reasoning about property restrictions finds inconsistency in:</p>
+
+<pre>Every man sees a dog.
+Nothing is a dog.
+John is a man.
+</pre>
+
+<p>Reasoning about properties of properties. The following
+text is consistent.</p>
+
+<pre>No dog likes a cat.
+Fido is a dog.
+It loves a cat.
+</pre>
+
+<p>But it becomes inconsistent if we add information about the
+relation between `like' and `love':</p>
+
+<pre>Everything that loves something likes it.
+</pre>
+
+
+<p>We can also reason about the domain and range of properties.</p>
+
+<pre>Everything that somebody writes is a book.
+Everybody that writes something is a human.
+John who is a man writes a paper.
+Every man is a human.
+</pre>
+
+<p>Inconsistency is caused when we now claim that:</p>
+
+<pre>No paper is a book.
+</pre>
+
+<p>Reasoning about cardinality, e.g. functional properties.
+Imagine a library policy saying that everybody can order only one item
+from the library, and that John places two orders.</p>
+
+<pre>Everybody orders at most one thing.
+John orders a book X and orders a book Y.
+</pre>
+
+<p>This text is consistent, namely because the reasoner sees nothing strange
+about taking X and Y to denote the same item (individual).
+Only when we state that:</p>
+
+<pre>X is not Y.
+</pre>
+
+<p>would it become inconsistent.</p>
+
+
+<p>Reasoning about inverse functional properties is similar.</p>
+
+<pre>Everything is ordered by at most one thing.
+Mary orders a book X.
+Bill orders the book X.
+Mary is not Bill.
+</pre>
+
+
+<p>Reasoning about transitivity and <em>HasValue</em>
+will find the following text inconsistent.</p>
+
+<pre>If something X follows something that follows something Y then X follows Y.
+John follows Mary who follows Bill who follows John.
+No manager follows Mary.
+Bill is a manager.
+</pre>
+
+
+<p>Reasoning about inverse properties. In ACE, in many cases,
+one does not have to explicitly assert a named inverse property of
+a given property. One can simply use a passive verb to create
+an (unnamed) inverse property.
+An inconsistent text, containing an inverse property, can be
+constructed like this:</p>
+
+<pre>John likes Mary.
+Nobody is liked by John.
+
+# This statement would be redundant:
+#If somebody X likes somebody Y then Y is liked by X.
+</pre>
+
+
+<p>Reasoning about nominals (i.e. OWL's <em>OneOf</em>
+construct). The following text is inconsistent.</p>
+
+<pre>Every student is somebody who is John or who is Mary.
+Bill is a student who is not John and who is not Mary.
+</pre>
+
+<!--
+<p>Reasoning with <em>HasValue</em>.
+The fact that "John is a man." causes inconsistency.</p>
+
+<pre>
+There is a woman who every man likes.
+Nobody likes her.
+John is a man.
+</pre>
+-->
+
+<!--
+<p>Finally a classification example, using <em>AllValuesFrom</em>.</p>
+
+<pre>
+Everything that John likes is a woman.
+John likes Mary.
+
+Pellet's classification:
+
+ owl:Thing - (John)
+       woman - (Mary)
+</pre>
+-->
+
+
+<h2>6 <a name="Supporting tools">Supporting tools</a></h2>
+
+<p>To learn ACE, check out the Attempto project website at
+<a href="http://attempto.ifi.uzh.ch/site">http://attempto.ifi.uzh.ch/site/</a>.
+The Attempto project provides tools for working with ACE,
+in particular, Attempto Parsing Engine (APE) can be used to convert
+ACE texts into Discourse Representation Structures
+and then to OWL.</p>
+
+<p>APE is available under the LGPL license, but it can also be used through a REST webservice.
+For example, an OWL ontology that corresponds to the ACE text ``Every man is a human.''
+is given by the URL</p>
+
+<blockquote>
+<p><a href="http://attempto.ifi.uzh.ch/ws/ape/apews.perl?text=Every+man+is+a+human.&solo=owlxml">http://attempto.ifi.uzh.ch/ws/ape/apews.perl?text=Every+man+is+a+human.&amp;solo=owlxml</a></p>
+</blockquote>
+
+<p>The resulting ontology is represented in the XML Serialization syntax.
+For a Prolog-based serialization, use
+<a href="http://attempto.ifi.uzh.ch/ws/ape/apews.perl?text=Every+man+is+a+human.&solo=owlfss">solo=owlfss</a>.</p>
+
+<p>To visualize and reason about the ontologies that APE generates, load the
+generated XML output into an ontology editor that supports OWL 2 (e.g.
+<a href="http://protege.stanford.edu/">Protégé 4</a>).</p>
+
+<!--
+<p>Note that APE can also output the ontology in the OWL 2 Functional-Style
+Syntax (in Prolog notation), e.g. the URL</p>
+
+<blockquote>
+<p><a href="http://attempto.ifi.uzh.ch/ws/ape/apews.perl?text=Everybody+who+drives+a+police-car+is+employed+by+a+police-department.&amp;guess=on&amp;solo=owlfss">http://attempto.ifi.uzh.ch/ws/ape/apews.perl?text=Everybody+who+drives+a+police-car+is+employed+by+a+police-department.&amp;guess=on&amp;solo=owlfss</a></p>
+</blockquote>
+
+<p>generates a Prolog term corresponding to the ACE sentence
+``Everybody who drives a police-car is employed by a police-department.''</p>
+-->
+
+<address>
+Kaarel Kaljurand (kaljurand@gmail.com),
+2010-11-04
+</address>
+
+
+
+</body></html>

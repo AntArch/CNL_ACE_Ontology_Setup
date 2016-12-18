@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ace_lexicon "http://attempto.ifi.uzh.ch/ace_lexicon#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#">
+    <Ontology rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#TV_pl -->
+
+    <AnnotationProperty rdf:about="&ace_lexicon;TV_pl"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#TV_sg -->
+
+    <AnnotationProperty rdf:about="&ace_lexicon;TV_sg"/>
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/ace_lexicon#TV_vbg -->
+
+    <AnnotationProperty rdf:about="&ace_lexicon;TV_vbg"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#follow -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#follow">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#inferredConnection -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#inferredConnection">
+        <ace_lexicon:TV_vbg>inferredConnected</ace_lexicon:TV_vbg>
+        <ace_lexicon:TV_pl xml:lang="en">inferredConnection</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_sg xml:lang="en">inferredConnections</ace_lexicon:TV_sg>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#networkConnection -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#networkConnection">
+        <ace_lexicon:TV_sg>networkConnections</ace_lexicon:TV_sg>
+        <ace_lexicon:TV_vbg>networkConnected</ace_lexicon:TV_vbg>
+        <ace_lexicon:TV_pl>networkConnection</ace_lexicon:TV_pl>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#physicalConnection -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#physicalConnection">
+        <ace_lexicon:TV_pl>physicalConnection</ace_lexicon:TV_pl>
+        <ace_lexicon:TV_sg>physicalConnections</ace_lexicon:TV_sg>
+        <ace_lexicon:TV_vbg>physicalConnected</ace_lexicon:TV_vbg>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#tall -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#tall">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#asset -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#asset">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#commsPipe -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#commsPipe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#wholesaleAsset"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#distributionServicePoint -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#distributionServicePoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#serviceStart"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#ferrule -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#ferrule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralPoint"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralLine -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralLine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#asset"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralPoint -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralPoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#asset"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#main -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#main">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#wholesaleAsset"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#meter -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#meter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralPoint"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#meterAndStop -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#meterAndStop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralPoint"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#privatePipe -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#privatePipe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#retailAsset"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#retailAsset -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#retailAsset"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#retailServicePoint -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#retailServicePoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#serviceEnd"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#serviceEnd -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#serviceEnd">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralPoint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#retailAsset"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#servicePoint -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#servicePoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralPoint"/>
+        <rdfs:subClassOf>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#stopTap"/>
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#meter"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#meterAndStop"/>
+                        </unionOf>
+                    </Class>
+                </unionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#retailAsset"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#wholesaleAsset"/>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#serviceStart -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#serviceStart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#ferrule"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralPoint"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#wholesaleAsset"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#stopTap -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#stopTap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#lateralPoint"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#wholesaleAsset -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#wholesaleAsset">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#wholesaleServicePoint -->
+
+    <Class rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#wholesaleServicePoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#servicePoint"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#ID_12345 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#ID_12345">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#ferrule"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#serviceStart"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <Class>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2010/9/27/countries_base.owl#ID_12345"/>
+        </oneOf>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

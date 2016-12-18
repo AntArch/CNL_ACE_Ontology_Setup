@@ -1,0 +1,741 @@
+Everything that is hasToped by an AmericanHot is a HotGreenPepper that is a Jalapeno 
+ and that is a Mozzarella 
+ and that is a Pepperoni 
+ and that is a Tomato.
+
+Every Soho is a Pizza that hasTopping a Garlic that is a Mozzarella 
+ and that is an Olive 
+ and that is a Parmesan 
+ and that is a Rocket 
+ and that is a Tomato. Every Pizza that hasTopping a Garlic that is a Mozzarella 
+ and that is an Olive 
+ and that is a Parmesan 
+ and that is a Rocket 
+ and that is a Tomato is a Soho.
+
+If X hasTopping Y then X hasIngredients Y.
+
+Every Cheese is a PizzaTopping.
+
+Every PizzaCajun is something.
+
+Every Soho hasTopping a Garlic that is a Mozzarella 
+ and that is an Olive 
+ and that is a Parmesan 
+ and that is a Rocket 
+ and that is a Tomato.
+
+Every Fish is a PizzaTopping.
+
+Every MushroomPizza is a NamedPizza.
+
+Every SunDriedTomato is something.
+
+Every FruttusDusMare hasTopping a Garlic that is a Seafood 
+ and that is a Tomato.
+
+Everything that is hasToped by a Cajun is a Mozzarella that is an Onion 
+ and that is a Peperona 
+ and that is a Prawn 
+ and that is a TobascoPepperSauce 
+ and that is a Tomato.
+
+Every PolloAdAstra is a NamedPizza.
+
+Every HotSpicedBeef is a Meat.
+
+Everything that is hasToped by a Siciliana is an Anchovy that is an Artichoke 
+ and that is a Garlic 
+ and that is a Ham 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Tomato.
+
+Every Tomato hasSpicinesses a MildSpiciness.
+
+Every Veneziana is a Pizza that hasTopping a Caper that is a Mozzarella 
+ and that is an Olive 
+ and that is an Onion 
+ and that is a PineKernel 
+ and that is a Sultana 
+ and that is a Tomato. Every Pizza that hasTopping a Caper that is a Mozzarella 
+ and that is an Olive 
+ and that is an Onion 
+ and that is a PineKernel 
+ and that is a Sultana 
+ and that is a Tomato is a Veneziana.
+
+Every PanPizzaBase is something.
+
+Every Parmesan is a Cheese.
+
+Every Parmense is a NamedPizza.
+
+germany is a Country.
+
+Every ThinCrispyPizza is something.
+
+Every Caper hasSpicinesses a MildSpiciness.
+
+Every Rosa is a NamedPizza.
+
+Every Mozzarella is a Cheese.
+
+Every FourSeason is a NamedPizza.
+
+Every HotSpicedBeef hasSpicinesses a HotSpiciness.
+
+Every PrinceCarlo hasTopping a Leek that is a Mozzarella 
+ and that is a Parmesan 
+ and that is a Rosemary 
+ and that is a Tomato.
+
+Every SpicyPizzaEquivalent is a Pizza that hasTopping a PizzaTopping that hasSpicinesses a HotSpiciness. Every Pizza that hasTopping a PizzaTopping that hasSpicinesses a HotSpiciness is a SpicyPizzaEquivalent.
+
+Every Capricciosa hasTopping an Anchovy that is a Caper 
+ and that is a Ham 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Peperona 
+ and that is a Tomato.
+
+Every Rosa is a Pizza that hasTopping a Gorgonzolum that is a Mozzarella 
+ and that is a Tomato. Every Pizza that hasTopping a Gorgonzolum that is a Mozzarella 
+ and that is a Tomato is a Rosa.
+
+Every Spinach hasSpicinesses a MildSpiciness.
+
+Every Capricciosa is a Pizza that hasTopping an Anchovy that is a Caper 
+ and that is a Ham 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Peperona 
+ and that is a Tomato. Every Pizza that hasTopping an Anchovy that is a Caper 
+ and that is a Ham 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Peperona 
+ and that is a Tomato is a Capricciosa.
+
+Every Tomato is a Vegetable.
+
+Every SpicyMeat is something.
+
+Every Soho is a NamedPizza.
+
+Every Ham is a Meat.
+
+Every PizzaCappriciosa is something.
+
+Every Rosa hasTopping a Gorgonzolum that is a Mozzarella 
+ and that is a Tomato.
+
+Every MushroomPizza hasTopping a Mozzarella that is a Mushroom 
+ and that is a Tomato.
+
+Every AmericanHot hasTopping a HotGreenPepper that is a Jalapeno 
+ and that is a Mozzarella 
+ and that is a Pepperoni 
+ and that is a Tomato.
+
+Every Artichoke is a Vegetable.
+
+Every FruttusDusMare is a NamedPizza.
+
+Every RealItalianPizza is a Pizza.
+
+Everything that is hasToped by a FruttusDusMare is a Garlic that is a Seafood 
+ and that is a Tomato.
+
+Every Caprina is a Pizza that hasTopping a GoatCheese that is a Mozzarella 
+ and that is a SundriedTomato 
+ and that is a Tomato. Every Pizza that hasTopping a GoatCheese that is a Mozzarella 
+ and that is a SundriedTomato 
+ and that is a Tomato is a Caprina.
+
+Every PizzaAmericana is something.
+
+Every Herb is a PizzaTopping.
+
+Every Peperona is a Pepper.
+
+Every PolloAdAstra is a Pizza that hasTopping a CajunSpice that is a Chicken 
+ and that is a Garlic 
+ and that is a Mozzarella 
+ and that is a RedOnion 
+ and that is a SweetPepper 
+ and that is a Tomato. Every Pizza that hasTopping a CajunSpice that is a Chicken 
+ and that is a Garlic 
+ and that is a Mozzarella 
+ and that is a RedOnion 
+ and that is a SweetPepper 
+ and that is a Tomato is a PolloAdAstra.
+
+Every PolloAdAstra hasTopping a CajunSpice that is a Chicken 
+ and that is a Garlic 
+ and that is a Mozzarella 
+ and that is a RedOnion 
+ and that is a SweetPepper 
+ and that is a Tomato.
+
+Every FourSeason is a Pizza that hasTopping an Anchovy that is a Caper 
+ and that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Pepperoni 
+ and that is a Tomato. Every Pizza that hasTopping an Anchovy that is a Caper 
+ and that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Pepperoni 
+ and that is a Tomato is a FourSeason.
+
+Every Pea is something.
+
+Every Fruit is a PizzaTopping.
+
+Every CajunSpice is a Herb.
+
+No DeepPanBase is a ThinCrispyBase.
+
+Every NamedPizza is a Pizza.
+
+Every Garlic hasSpicinesses a MediumSpiciness.
+
+Every Mushroom is a Vegetable.
+
+Every Icecream hasTopping a Fruit.
+
+Every MeatyPizza is something.
+
+Every QuattroFormaggus is a Pizza that hasTopping at least 4 Cheeses 
+ and that hasTopping a Tomato. Every Pizza that hasTopping at least 4 Cheeses 
+ and that hasTopping a Tomato is a QuattroFormaggus.
+
+france is a Country.
+
+Everything that is hasToped by a PolloAdAstra is a CajunSpice that is a Chicken 
+ and that is a Garlic 
+ and that is a Mozzarella 
+ and that is a RedOnion 
+ and that is a SweetPepper 
+ and that is a Tomato.
+
+Every Onion hasSpicinesses a MediumSpiciness.
+
+Every Cajun is a NamedPizza.
+
+Every Nut is a PizzaTopping.
+
+Every QuattroFormaggus is a NamedPizza.
+
+Every Fish hasSpicinesses a MildSpiciness.
+
+Every Prawn is a Fish.
+
+Every NonVegetarianPizza is a Pizza. Every Pizza is a NonVegetarianPizza.
+
+Every MediumSpiciness is something.
+
+Every TobascoPepperSauce is a Sauce.
+
+Everything that is hasToped by a QuattroFormaggus is a Cheese that is a Tomato.
+
+Everything that is hasToped by a Soho is a Garlic that is a Mozzarella 
+ and that is an Olive 
+ and that is a Parmesan 
+ and that is a Rocket 
+ and that is a Tomato.
+
+Every SloppyGiuseppe is a Pizza that hasTopping a GreenPepper that is a HotSpicedBeef 
+ and that is a Mozzarella 
+ and that is an Onion 
+ and that is a Tomato. Every Pizza that hasTopping a GreenPepper that is a HotSpicedBeef 
+ and that is a Mozzarella 
+ and that is an Onion 
+ and that is a Tomato is a SloppyGiuseppe.
+
+Every SeaFoodPizza is something.
+
+Every Caprina hasTopping a GoatCheese that is a Mozzarella 
+ and that is a SundriedTomato 
+ and that is a Tomato.
+
+Every Sultana is a Fruit.
+
+italy is a Country.
+
+Every QuattroFormaggus hasTopping a Cheese that is a Tomato.
+
+Every PrinceCarlo is a Pizza that hasTopping a Leek that is a Mozzarella 
+ and that is a Parmesan 
+ and that is a Rosemary 
+ and that is a Tomato. Every Pizza that hasTopping a Leek that is a Mozzarella 
+ and that is a Parmesan 
+ and that is a Rosemary 
+ and that is a Tomato is a PrinceCarlo.
+
+Every NonVegetarianPizza is a Pizza.
+
+Every ParmaHam is a Ham.
+
+Every VegetarianPizzaEquivalent1 is something.
+
+Every Garlic is a Vegetable.
+
+Every Artichoke hasSpicinesses a MildSpiciness.
+
+Every Chicken is a Meat.
+
+Every InterestingPizza is something.
+
+Every Siciliana is a Pizza that hasTopping an Anchovy that is an Artichoke 
+ and that is a Garlic 
+ and that is a Ham 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Tomato. Every Pizza that hasTopping an Anchovy that is an Artichoke 
+ and that is a Garlic 
+ and that is a Ham 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Tomato is a Siciliana.
+
+Every Leek hasSpicinesses a MildSpiciness.
+
+Every Sauce is a PizzaTopping.
+
+Every SweetPepper hasSpicinesses a MildSpiciness.
+
+Every Pizza is a DomainConcept.
+
+Everything that is hasToped by a Caprina is a GoatCheese that is a Mozzarella 
+ and that is a SundriedTomato 
+ and that is a Tomato.
+
+Every Olive is a Vegetable.
+
+Everything that is hasToped by a Margherita is a Mozzarella that is a Tomato.
+
+Every Fiorentina is a NamedPizza.
+
+Every Giardiniera is a Pizza that hasTopping a Leek that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Peperona 
+ and that is a PetitPoi 
+ and that is a SlicedTomato 
+ and that is a Tomato. Every Pizza that hasTopping a Leek that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Peperona 
+ and that is a PetitPoi 
+ and that is a SlicedTomato 
+ and that is a Tomato is a Giardiniera.
+
+Every Spinach is a Vegetable.
+
+Every MushroomPizza is a Pizza that hasTopping a Mozzarella that is a Mushroom 
+ and that is a Tomato. Every Pizza that hasTopping a Mozzarella that is a Mushroom 
+ and that is a Tomato is a MushroomPizza.
+
+Everything that is hasToped by a Rosa is a Gorgonzolum that is a Mozzarella 
+ and that is a Tomato.
+
+Every Meat is a PizzaTopping.
+
+Every Napoletana is a Pizza that hasTopping an Anchovy that is a Caper 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Tomato. Every Pizza that hasTopping an Anchovy that is a Caper 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Tomato is a Napoletana.
+
+Every Gorgonzolum hasSpicinesses a MildSpiciness.
+
+Every Fiorentina hasTopping a Garlic that is a Mozzarella 
+ and that is an Olive 
+ and that is a Parmesan 
+ and that is a Spinach 
+ and that is a Tomato.
+
+Every Country is a DomainConcept.
+
+No HotSpiciness is a MildSpiciness.
+
+Every Asparagus is a Vegetable.
+
+Every PineKernel is a Nut.
+
+Everything that is hasToped by a MushroomPizza is a Mozzarella that is a Mushroom 
+ and that is a Tomato.
+
+Every Mozzarella hasSpicinesses a MildSpiciness.
+
+Every SloppyGiuseppe hasTopping a GreenPepper that is a HotSpicedBeef 
+ and that is a Mozzarella 
+ and that is an Onion 
+ and that is a Tomato.
+
+Every Capricciosa is a NamedPizza.
+
+Every American is a Pizza that hasTopping a Mozzarella 
+ and that hasTopping a Pepperoni 
+ and that hasTopping a Tomato. Every Pizza that hasTopping a Mozzarella 
+ and that hasTopping a Pepperoni 
+ and that hasTopping a Tomato is an American.
+
+Every Giardiniera hasTopping a Leek that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Peperona 
+ and that is a PetitPoi 
+ and that is a SlicedTomato 
+ and that is a Tomato.
+
+Every DeepPanBase is a PizzaBase.
+
+Every Spiciness is a ValuePartition.
+
+Every TobascoPepperSauce hasSpicinesses a HotSpiciness.
+
+Every AmericanHot is a NamedPizza.
+
+Every PizzaAmericanaPicante is something.
+
+Every VegetarianPizzaEquivalent1 hasTopping a VegetarianTopping.
+
+No HotSpiciness is a MediumSpiciness.
+
+Every Veneziana is a NamedPizza.
+
+Every Cajun is a Pizza that hasTopping a Mozzarella 
+ and that hasTopping an Onion 
+ and that hasTopping a Peperona 
+ and that hasTopping a Prawn 
+ and that hasTopping a TobascoPepperSauce 
+ and that hasTopping a Tomato. Every Pizza that hasTopping a Mozzarella 
+ and that hasTopping an Onion 
+ and that hasTopping a Peperona 
+ and that hasTopping a Prawn 
+ and that hasTopping a TobascoPepperSauce 
+ and that hasTopping a Tomato is a Cajun.
+
+Every Giardiniera is a NamedPizza.
+
+Every GoatCheese hasSpicinesses a MildSpiciness.
+
+Every Onion is a Vegetable.
+
+Every Margherita is a Pizza that hasTopping a Mozzarella that is a Tomato. Every Pizza that hasTopping a Mozzarella that is a Tomato is a Margherita.
+
+Every HotSpiciness is a Spiciness.
+
+Every Napoletana hasTopping an Anchovy that is a Caper 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Tomato.
+
+Everything that is hasToped by a Napoletana is an Anchovy that is a Caper 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Tomato.
+
+Everything that is hasToped by a VegetarianPizzaEquivalent1 is a VegetarianTopping.
+
+No MediumSpiciness is a MildSpiciness.
+
+Every SpicyPizza is a Pizza that hasTopping a SpicyTopping. Every Pizza that hasTopping a SpicyTopping is a SpicyPizza.
+
+Everything that is hasToped by a Veneziana is a Caper that is a Mozzarella 
+ and that is an Olive 
+ and that is an Onion 
+ and that is a PineKernel 
+ and that is a Sultana 
+ and that is a Tomato.
+
+Every VegetarianTopping is something.
+
+Every Caper is a Vegetable.
+
+Every Pepperoni is a Meat.
+
+Every CheesyPizza is something.
+
+Every Anchovie is something.
+
+Every Rosemary hasSpicinesses a MildSpiciness.
+
+Every Anchovy is a Fish.
+
+Every ParmaHam hasSpicinesses a MildSpiciness.
+
+Every SpicyPizza is something.
+
+Every Icecream is a DomainConcept.
+
+Every Veneziana hasTopping a Caper that is a Mozzarella 
+ and that is an Olive 
+ and that is an Onion 
+ and that is a PineKernel 
+ and that is a Sultana 
+ and that is a Tomato.
+
+Everything that is hasToped by a Fiorentina is a Garlic that is a Mozzarella 
+ and that is an Olive 
+ and that is a Parmesan 
+ and that is a Spinach 
+ and that is a Tomato.
+
+Every Pepperoni hasSpicinesses a MediumSpiciness.
+
+Every HotGreenPepper is a GreenPepper.
+
+Every FourSeason hasTopping an Anchovy that is a Caper 
+ and that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Pepperoni 
+ and that is a Tomato.
+
+Every Rocket hasSpicinesses a MediumSpiciness.
+
+Every Food is something.
+
+Every Vegetable is a PizzaTopping.
+
+Everything that is hasToped by a LaReine is a Ham that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Tomato.
+
+Every JalapenoPepper is a Pepper.
+
+Everything that is hasToped by a Giardiniera is a Leek that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Peperona 
+ and that is a PetitPoi 
+ and that is a SlicedTomato 
+ and that is a Tomato.
+
+Every LaReine is a Pizza that hasTopping a Ham that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Tomato. Every Pizza that hasTopping a Ham that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Tomato is a LaReine.
+
+Every PizzaNapolitana is something.
+
+Every Asparagus hasSpicinesses a MildSpiciness.
+
+Every MeatyPizza is a Pizza that hasTopping at least 1 Meat. Every Pizza that hasTopping at least 1 Meat is a MeatyPizza.
+
+Every SlicedTomato is a Tomato.
+
+Every GreenPepper is a Pepper.
+
+Every PizzaTopping is something.
+
+Every Tabasco is something.
+
+Every PrinceCarlo is a NamedPizza.
+
+Every Margherita is a NamedPizza.
+
+Every Mushroom hasSpicinesses a MildSpiciness.
+
+Every ThinPizzaBase is something.
+
+Every Leek is a Vegetable.
+
+Every VegetarianPizza is something.
+
+Every CajunSpice hasSpicinesses a HotSpiciness.
+
+Every Jalapeno is something.
+
+Every PetitPoi is a Vegetable.
+
+If X hasBases Y then X hasIngredients Y.
+
+Every Parmense is a Pizza that hasTopping an Asparagus that is a Ham 
+ and that is a Mozzarella 
+ and that is a Parmesan 
+ and that is a Tomato. Every Pizza that hasTopping an Asparagus that is a Ham 
+ and that is a Mozzarella 
+ and that is a Parmesan 
+ and that is a Tomato is a Parmense.
+
+Every Pizza is a Food.
+
+Every Seafood is a Fish.
+
+Every GoatCheese is a Cheese.
+
+Every Rosemary is a Herb.
+
+Every Peperona hasSpicinesses a MediumSpiciness.
+
+Every Spiciness is something that is a HotSpiciness or that is a MediumSpiciness or that is a MildSpiciness. Everything that is a HotSpiciness or that is a MediumSpiciness or that is a MildSpiciness is a Spiciness.
+
+Every Parmense hasTopping an Asparagus that is a Ham 
+ and that is a Mozzarella 
+ and that is a Parmesan 
+ and that is a Tomato.
+
+Every SpicyPizzaEquivalent is something.
+
+Every SpicyTopping is something.
+
+Every American hasTopping a Mozzarella that is a Pepperoni 
+ and that is a Tomato.
+
+Every Siciliana is a NamedPizza.
+
+Every Napoletana is a NamedPizza.
+
+america is a Country.
+
+Every PetitPoi hasSpicinesses a MildSpiciness.
+
+Every Cajun hasTopping a Mozzarella that is an Onion 
+ and that is a Peperona 
+ and that is a Prawn 
+ and that is a TobascoPepperSauce 
+ and that is a Tomato.
+
+Every ThinCrispyBase is something.
+
+Every Margherita hasTopping a Mozzarella that is a Tomato.
+
+Every FruttusDusMare is a Pizza that hasTopping a Garlic that is a Seafood 
+ and that is a Tomato. Every Pizza that hasTopping a Garlic that is a Seafood 
+ and that is a Tomato is a FruttusDusMare.
+
+Every MildSpiciness is something.
+
+Every Rocket is a Vegetable.
+
+Every Parmesan hasSpicinesses a MildSpiciness.
+
+Every UnclosedPizza is a Pizza that hasTopping a Mozzarella. Every Pizza that hasTopping a Mozzarella is an UnclosedPizza.
+
+Every SweetPepper is a Pepper.
+
+Every PizzaBase is something.
+
+Every Gorgonzolum is a Cheese.
+
+Everything that is hasToped by a Parmense is an Asparagus that is a Ham 
+ and that is a Mozzarella 
+ and that is a Parmesan 
+ and that is a Tomato.
+
+Every SloppyGiuseppe is a NamedPizza.
+
+Every Olive hasSpicinesses a MildSpiciness.
+
+Every UnclosedPizza is a NamedPizza.
+
+Every Caprina is a NamedPizza.
+
+Every Sultana hasSpicinesses a MildSpiciness.
+
+Every Siciliana hasTopping an Anchovy that is an Artichoke 
+ and that is a Garlic 
+ and that is a Ham 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Tomato.
+
+Every SeaFood is something.
+
+Every PizzaFourCheese is something.
+
+england is a Country.
+
+Every Pizza is a VegetarianPizzaEquivalent1. Every VegetarianPizzaEquivalent1 is a Pizza.
+
+Everything that is hasToped by a SloppyGiuseppe is a GreenPepper that is a HotSpicedBeef 
+ and that is a Mozzarella 
+ and that is an Onion 
+ and that is a Tomato.
+
+Every InterestingPizza is a Pizza that hasTopping at least 3 things. Every Pizza that hasTopping at least 3 things is an InterestingPizza.
+
+Everything that is hasToped by a FourSeason is an Anchovy that is a Caper 
+ and that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Pepperoni 
+ and that is a Tomato.
+
+Every LaReine hasTopping a Ham that is a Mozzarella 
+ and that is a Mushroom 
+ and that is an Olive 
+ and that is a Tomato.
+
+Every SundriedTomato is a Tomato.
+
+Every Nut hasSpicinesses a MildSpiciness.
+
+Every American is a NamedPizza.
+
+Every AmericanHot is a Pizza that hasTopping a HotGreenPepper 
+ and that hasTopping a JalapenoPepper 
+ and that hasTopping a Mozzarella 
+ and that hasTopping a Pepperoni 
+ and that hasTopping a Tomato. Every Pizza that hasTopping a HotGreenPepper 
+ and that hasTopping a JalapenoPepper 
+ and that hasTopping a Mozzarella 
+ and that hasTopping a Pepperoni 
+ and that hasTopping a Tomato is an AmericanHot.
+
+Everything that is hasToped by a PrinceCarlo is a Leek that is a Mozzarella 
+ and that is a Parmesan 
+ and that is a Rosemary 
+ and that is a Tomato.
+
+Every RedOnion is an Onion.
+
+Every CheesyPizza is a Pizza that hasTopping a Cheese. Every Pizza that hasTopping a Cheese is a CheesyPizza.
+
+Every LaReine is a NamedPizza.
+
+Every PizzaMargherita is something.
+
+Everything that is hasToped by an American is a Mozzarella that is a Pepperoni 
+ and that is a Tomato.
+
+Every Shrimp is something.
+
+Everything that is hasToped by a Capricciosa is an Anchovy that is a Caper 
+ and that is a Ham 
+ and that is a Mozzarella 
+ and that is an Olive 
+ and that is a Peperona 
+ and that is a Tomato.
+
+Every Fiorentina is a Pizza that hasTopping a Garlic that is a Mozzarella 
+ and that is an Olive 
+ and that is a Parmesan 
+ and that is a Spinach 
+ and that is a Tomato. 
+ 
+Every Pizza that hasTopping a Garlic that is a Mozzarella 
+ and that is an Olive 
+ and that is a Parmesan 
+ and that is a Spinach 
+ and that is a Tomato is a Fiorentina.
+
+Every Pepper is a Vegetable.
+
+Every Pizza hasBases a PizzaBase.
+
+Every Chicken hasSpicinesses a MildSpiciness.
+
+Every ValuePartition is something.

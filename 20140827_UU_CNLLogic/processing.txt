@@ -1,0 +1,11 @@
+cd /home/arb/ownCloud/documents/CommonMarkDocs/20140827_UU_CNLLogic
+
+pandoc -f markdown -t latex -N -V geometry:margin=1in 20150622_KnowledgeEngineeringAtUU.md TheOpenWaterProblem.md Bibliography.md --filter pandoc-citeproc --latex-engine=xelatex --toc -o 20150622_KnowledgeEngineeringAtUU.pdf
+
+pandoc -f markdown -t latex -N -V geometry:margin=1in ProofOfConceptForCNLLogicForKnowledgeEngineeringAt1Spatial.md TheOpenWaterProblem.md Appendix.md Bibliography.md --filter pandoc-citeproc --latex-engine=xelatex --toc -o ProofOfConceptForCNLLogicForKnowledgeEngineeringAt1Spatial.pdf
+
+pandoc -f markdown ProofOfConceptForCNLLogicForKnowledgeEngineeringAt1Spatial.md TheOpenWaterProblem.md Appendix.md Bibliography.md -o ProofOfConceptForCNLLogicForKnowledgeEngineeringAt1Spatial.odt
+
+pandoc -f markdown -t latex -N -V geometry:margin=1in ProofOfConceptForCNLLogicForKnowledgeEngineeringAtUU.md TheOpenWaterProblem.md Appendix.md Bibliography.md --filter pandoc-citeproc --latex-engine=xelatex --toc -o ProofOfConceptForCNLLogicForKnowledgeEngineeringAtUU.pdf
+
+pandoc -f markdown ProofOfConceptForCNLLogicForKnowledgeEngineeringAtUU.md TheOpenWaterProblem.md Appendix.md Bibliography.md -o ProofOfConceptForCNLLogicForKnowledgeEngineeringAtUU.odt

@@ -1,0 +1,641 @@
+/**
+* @title Countries and territories
+* @author Kaarel Kaljurand
+* @version 2010_11_09
+*
+* The goal of this text to describe some aspects of the european Union
+* completely (e.g. we list all the countries). We also cover nato and g8 membership.
+* The main focus is on bordering information.
+*
+* Since the idea is to demonstrate reasoning with this text, we have to
+* be careful so that reasoning is reasonably fast. Thus we avoid certain useful
+* but "slow" constructs (e.g. "There are exactly 27 eu_countries.").
+*
+* TODO:
+* other cool stuff formalize/entail:
+* _ http://en.wikipedia.org/wiki/List_of_countries_that_border_only_one_other_country
+* _ http://en.wikipedia.org/wiki/List_of_sets_of_four_countries_that_border_one_another
+* _ http://en.wikipedia.org/wiki/List_of_land_border_lengths
+*
+* BUG: For some reason this is not entailed:
+* #@entails "Liechtenstein is a doubly_landlocked_territory." under OWL
+*
+*/
+
+Every country is a territory.
+
+Every eu_country is a european_country.
+
+Every nato_country is a country.
+
+Every european_country is a country that europe contains.
+Every country that europe contains is a european_country.
+
+/*
+Every eu_country is a member of eu.
+Every member of eu is an eu_country.
+
+Every nato_country is a member of nato.
+Every member of nato is a nato_country.
+*/
+
+No nato_country is a neutral_country.
+
+Every territory borders a territory or borders a sea.
+
+If X borders Y then Y borders X.
+
+If X surrounds Y then X borders Y.
+
+Nothing borders itself.
+
+/* Everything that is surrounded by a country is surrounded by exactly 1 country. */
+/* Everything is surrounded by at most 1 thing. */
+
+Nothing is surrounded by more than 1 thing.
+
+Every territory that is surrounded by a country is an enclave.
+Every enclave is a territory that is surrounded by a country.
+
+No territory that is bordered by at least 2 countries is an enclave.
+
+/* BUG: caused Pellet 1.5 exception */
+/* Seems to be OK in Pellet 2rc4 */
+/* If something X is surrounded by exactly 1 country then X is bordered by exactly 1 country. */
+
+/*
+Every enclave is a territory that is surrounded by a country X and that is a part of a country Y that is not X.
+Every territory that is surrounded by a country X and that is a part of a country Y that is not X is an enclave.
+*/
+
+San_Marino is surrounded by Italy.
+
+Vatican_City is surrounded by Italy.
+
+Kaliningrad is bordered by Lithuania.
+
+Kaliningrad is bordered by Poland.
+
+Kaliningrad is not a country.
+
+Every country that is not a nato_country and that borders a nato_country
+is a neutral_country or dislikes nato.
+
+If X dislikes Y then X does not like Y.
+
+Every country that is not a nato_country and that does not dislike nato is a neutral_country.
+
+Every country that is not bordered by a country is an island_country.
+
+/* Every island_country is bordered by no country or is bordered by nothing but island_countries. */
+
+Every country that borders an island_country is an island_country.
+
+Every island_country is a country.
+
+/* # BUG: Why doesn't this show up after loading. #_comment processing problem, i.e.
+problem with newlines. */
+United_Kingdom is an island_country.
+
+If there is a nato_country that is a neutral_country then it is a neutral_nato_country.
+Every neutral_nato_country is a nato_country that is a neutral_country.
+
+Every territory that is surrounded by something that is not a sea is not bordered by a sea.
+
+No sea is a territory.
+
+/* Definition: landlocked_territory */
+Every territory that is not bordered by a sea is a landlocked_territory.
+
+Every landlocked_territory is a territory that is not bordered by a sea.
+
+/* Definition: doubly_landlocked_territory.
+   There are two in the world: Liechtenstein, Uzbekistan */
+Every territory that borders nothing but landlocked_territories is a doubly_landlocked_territory.
+
+Every doubly_landlocked_territory is a territory that borders nothing but landlocked_territories.
+
+
+/* european countries not in eu */
+
+Albania is a european_country.
+
+Albania is a nato_country.
+
+Albania is not a eu_country.
+
+Andorra is a european_country.
+
+Armenia is a european_country.
+
+Azerbaijan is a european_country.
+
+Belarus is a european_country.
+
+Bosnia_and_Herzegovina is a european_country.
+
+Croatia is a european_country.
+
+Croatia is a nato_country.
+
+Croatia is not a eu_country.
+
+Georgia is a european_country.
+
+Kosovo is a european_country.
+
+Liechtenstein is a european_country.
+
+Moldova is a european_country.
+
+Monaco is a european_country.
+
+Monte_Negro is a european_country.
+
+Norway is a european_country.
+
+Norway is a nato_country.
+
+Norway is not a eu_country.
+
+Republic_of_Macedonia is a european_country.
+
+San_Marino is a european_country.
+
+Serbia is a european_country.
+
+Switzerland is a european_country.
+
+Turkey is a european_country.
+
+Turkey is a nato_country.
+
+Turkey is not a eu_country.
+
+Ukraine is a european_country.
+
+Vatican_City is a european_country.
+
+
+/* eu countries */
+
+Austria is an eu_country.
+
+Austria is not a nato_country.
+
+Belgium is an eu_country.
+
+Bulgaria is an eu_country.
+
+Cyprus is an eu_country.
+
+Cyprus is not a nato_country.
+
+Czech_Republic is an eu_country.
+
+Denmark is an eu_country.
+
+Finland is an eu_country.
+
+Finland is not a nato_country.
+
+France is an eu_country.
+
+Germany is an eu_country.
+
+Greece is an eu_country.
+
+Hungary is an eu_country.
+
+Ireland is an eu_country.
+
+Ireland is not a nato_country.
+
+Italy is an eu_country.
+
+Luxembourg is an eu_country.
+
+Malta is an eu_country.
+
+Netherlands is an eu_country.
+
+Poland is an eu_country.
+
+Portugal is an eu_country.
+
+Romania is an eu_country.
+
+Slovakia is an eu_country.
+
+Slovenia is an eu_country.
+
+Spain is an eu_country.
+
+Sweden is an eu_country.
+
+Sweden is not a nato_country.
+
+United_Kingdom is an eu_country.
+
+Every baltic_state is an eu_country.
+
+
+/* nato_countries */
+
+
+Belgium is a nato_country.
+
+Canada is a nato_country.
+
+
+Denmark is a nato_country.
+
+France is a nato_country.
+
+Iceland is a nato_country.
+
+Iceland is not a eu_country.
+
+Italy is a nato_country.
+
+Luxembourg is a nato_country.
+
+Netherlands is a nato_country.
+
+
+Portugal is a nato_country.
+
+United_Kingdom is a nato_country.
+
+United_States is a nato_country.
+
+Greece is a nato_country.
+
+
+Germany is a nato_country.
+
+Spain is a nato_country.
+
+Czech_Republic is a nato_country.
+
+Hungary is a nato_country.
+
+Poland is a nato_country.
+
+Bulgaria is a nato_country.
+
+Romania is a nato_country.
+
+Slovakia is a nato_country.
+
+Slovenia is a nato_country.
+
+Every baltic_state is a nato_country.
+
+
+Finland likes nato.
+
+
+/* g8 countries */
+
+United_States is a g8_country.
+
+United_Kingdom is a g8_country.
+
+Canada is a g8_country.
+
+Germany is a g8_country.
+
+France is a g8_country.
+
+Japan is a g8_country.
+
+Italy is a g8_country.
+
+Russia is a g8_country.
+
+
+/* baltic_states */
+
+Estonia is Estland.
+
+Estonia is a baltic_state.
+
+Latvia is a baltic_state.
+
+Lithuania is a baltic_state.
+
+Every baltic_state is Estonia or is Latvia or is Lithuania.
+
+
+/* Some well_known neutral countries. */
+
+Switzerland is a neutral_country.
+
+Sweden is a neutral_country.
+
+/* BUG: incomplete: cover the bordering also for nato members. */
+/* BUG: make a difference between land borders and water borders. */
+/* Note: artificial connections (tunnels, bridges) are not considered land borders. */
+/* Note: oversees territories (e.g. France has some) are not taken into account. */
+
+Portugal borders Spain.
+
+Spain borders France.
+
+Spain borders Andorra.
+
+France borders Belgium.
+
+France borders Germany.
+
+France borders Switzerland.
+
+France borders Italy.
+
+France borders Luxembourg.
+
+France borders Monaco.
+
+France borders Andorra.
+
+Belgium borders Netherlands.
+
+Belgium borders Germany.
+
+Belgium borders Luxembourg.
+
+Germany borders Netherlands.
+
+Germany borders Denmark.
+
+Germany borders Poland.
+
+Germany borders Czech_Republic.
+
+Germany borders Austria.
+
+Germany borders Switzerland.
+
+Germany borders Luxembourg.
+
+##Switzerland borders exactly 5 countries.
+
+Switzerland does not border a sea.
+
+Switzerland is not an eu_country.
+
+Switzerland borders Austria.
+
+Switzerland borders Italy.
+
+Switzerland borders Liechtenstein.
+
+Italy borders Austria.
+
+Italy borders Slovenia.
+
+Italy borders San_Marino.
+
+Italy borders Vatican_City.
+
+Poland borders Russia.
+
+Poland borders Lithuania.
+
+Poland borders Belarus.
+
+Poland borders Ukraine.
+
+Poland borders Slovakia.
+
+Poland borders Czech_Republic.
+
+Czech_Republic borders Slovakia.
+
+Czech_Republic borders Austria.
+
+##Austria borders exactly 8 countries.
+
+Austria does not border a sea.
+
+Austria borders Liechtenstein.
+
+Austria borders Slovakia.
+
+Austria borders Hungary.
+
+Austria borders Slovenia.
+
+Sweden borders Norway.
+
+Sweden borders Finland.
+
+Liechtenstein borders exactly 2 territories.
+
+Liechtenstein does not border a sea.
+
+Lithuania borders Russia.
+
+Lithuania borders Latvia.
+
+Lithuania borders Belarus.
+
+Slovakia borders Ukraine.
+
+Slovakia borders Hungary.
+
+Hungary borders Ukraine.
+
+Hungary borders Romania.
+
+Hungary borders Serbia.
+
+Hungary borders Croatia.
+
+Hungary borders Slovenia.
+
+Slovenia borders Croatia.
+
+Norway borders Russia.
+
+Norway borders Finland.
+
+Finland borders Russia.
+
+Latvia borders Estonia.
+
+Latvia borders Russia.
+
+Latvia borders Belarus.
+
+Romania borders Ukraine.
+
+Romania borders Moldova.
+
+Romania borders Bulgaria.
+
+Romania borders Serbia.
+
+Serbia borders Bulgaria.
+
+Serbia borders Republic_of_Macedonia.
+
+Serbia borders Kosovo.
+
+Serbia borders Monte_Negro.
+
+Serbia borders Bosnia_and_Herzegovina.
+
+Serbia borders Croatia.
+
+Croatia borders Bosnia_and_Herzegovina.
+
+Estonia borders Russia.
+
+Greece borders Albania.
+
+Greece borders Republic_of_Macedonia.
+
+Greece borders Bulgaria.
+
+Greece borders Turkey.
+
+Turkey borders Bulgaria.
+
+Turkey borders Georgia.
+
+Turkey borders Armenia.
+
+Turkey borders Iran.
+
+Turkey borders Iraq.
+
+Turkey borders Syria.
+
+Bulgaria borders Republic_of_Macedonia.
+
+United_Kingdom borders Ireland.
+
+/* Number of things bordered. BUG: incomplete */
+
+#Czech_Republic borders exactly 4 countries.
+
+/* BUG: the next two sentences slow down Pellet (or maybe make it loop). */
+
+/* Czech_Republic borders nothing but countries. */
+/* What is a country that Czech_Republic does not border? */
+
+Malta borders no countries.
+
+Cyprus borders no countries.
+
+Iceland borders no countries.
+
+
+
+/* Questions */
+What is a country?
+
+What is an eu_country?
+
+What is a nato_country?
+
+Which eu_country is a nato_country?
+
+Which eu_country is not a nato_country?
+
+Which nato_country is not an eu_country?
+
+What is an eu_country and is a nato_country and is a g8_country?
+
+What is a landlocked_territory?
+
+What is a baltic_state?
+
+Which eu_country borders a nato_country?
+
+What does Austria border?
+
+What does Belgium border?
+
+What does Bulgaria border?
+
+What does Cyprus border?
+
+What does Czech_Republic border?
+
+What does Denmark border?
+
+What does Estonia border?
+
+What does Finland border?
+
+What does France border?
+
+What does Liechtenstein border?
+
+Which landlocked_territories does Liechtenstein border?
+
+What does Germany border?
+
+/*
+What does Greece border?
+What does Hungary border?
+What does Ireland border?
+What does Italy border?
+What does Latvia border?
+What does Lithuania border?
+What does Luxembourg border?
+What does Malta border?
+What does Netherlands border?
+What does Poland border?
+What does Portugal border?
+What does Romania border?
+What does Slovakia border?
+What does Slovenia border?
+What does Spain border?
+What does Sweden border?
+*/
+
+What does Switzerland border?
+
+What does United_Kingdom border?
+
+What is an enclave?
+
+Which country is an enclave?
+
+Which enclave is not a country?
+
+Which country is bordered by exactly 1 country?
+
+What is an island_country?
+
+/* BUG: Does not work currently?! */
+Which country borders nothing but eu_countries? /* answer: Czech_Republic */
+
+Which country is not a nato_country and borders a nato_country?
+
+Which country is a doubly_landlocked_territory?
+
+Which enclave is bordered by at least 2 countries?
+
+Which country borders nothing but countries that are not an eu_country?
+
+Which territories does Liechtenstein border?
+
+Which landlocked_territories does Liechtenstein border?
+
+Which country is not Switzerland?
+
+/* Experimental stuff */
+/*
+There are exactly 27 eu_countries.
+There are exactly 26 nato_countries.
+There are exactly 8 g8_countries.
+____ dislikes every nato_country that it borders and that is not Norway.
+Which nato_countries border ____?
+Which countries does ____ dislike?
+AllDifferent: [...]
+*/
