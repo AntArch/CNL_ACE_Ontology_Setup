@@ -10,7 +10,11 @@ ACE appears perfectly natural, but — being a controlled subset of English — 
 
 A number of [tools have been developed for ACE](http://attempto.ifi.uzh.ch/site/tools/) (note there is a separate page from [tools and resources](http://attempto.ifi.uzh.ch/site/resources/). We will use a subset of these:
 
-* APE (ACE parser)
+* ACE editor
+	* The ACE Editor demonstrates how editing of ACE texts can be done in a convenient way. The ACE Editor is not a finished tool but rather a general basis to create domain-specific tools on top of it.
+	* Services
+		* [ACE editor](http://attempto.ifi.uzh.ch/aceeditor/)
+* ACE Parser (APE)
 	* A parser that provides:
 		* shows how each sentence has been split into linguistic and semantic primitives.
 	* Services
@@ -19,11 +23,12 @@ A number of [tools have been developed for ACE](http://attempto.ifi.uzh.ch/site/
 	* Support
 		* [Lexicon specification](http://attempto.ifi.uzh.ch/site/docs/ace_lexicon.html)
 		* [interactive Web client help](http://attempto.ifi.uzh.ch/site/docs/ape_webclient_help.html)
-* RACE (ACE reasoner)
+* ACE Protege plugin
+* ACE Reasoner (RACE)
 	* The ACE reasoner RACE allows users to do deduction on ACE texts, for example consistency checks and query answering.
 	* Services
 		* [RACE interactive web client](http://attempto.ifi.uzh.ch/race/)
-* AceRules
+* Ace Rules
 	* A service that materialises inferences based on rules
 	* Services
 		* [ARE rules interface](http://attempto.ifi.uzh.ch/acerules/)
@@ -31,7 +36,7 @@ A number of [tools have been developed for ACE](http://attempto.ifi.uzh.ch/site/
 		* [ARE rules technical interface (for developers)](http://attempto.ifi.uzh.ch/acerules_ti/)
 	* Support
 		* [Documentation for AceRules Webservice](http://attempto.ifi.uzh.ch/site/docs/acerules_webservice.html)
-* AceWiki
+* Ace Wiki
 	* AceWiki is a semantic wiki using ACE. Unlike most other semantic wikis, the semantics are contained directly in the article texts and not in some form of annotations.
 	* [AceWiki project site](http://attempto.ifi.uzh.ch/acewiki/)
 	* There is a docker instances
@@ -39,78 +44,6 @@ A number of [tools have been developed for ACE](http://attempto.ifi.uzh.ch/site/
 	* OWL verbalizer converts OWL ontologies (expressed in XML Serialization) into ACE.
 		* This conversion is designed to be reversible, i.e. one can convert the ACE representation back into OWL so that no loss in meaning occurs. 
 	* [OWL verbalizer project page](https://github.com/Kaljurand/owl-verbalizer)
-* ACE editor
-	* The ACE Editor demonstrates how editing of ACE texts can be done in a convenient way. The ACE Editor is not a finished tool but rather a general basis to create domain-specific tools on top of it.
-	* Services
-		* [ACE editor](http://attempto.ifi.uzh.ch/aceeditor/)
-
-# AceWiki
-
-[Dr Tobias Kuhn](http://www.tkuhn.org/) developed AceWiki as part of his PhD. He's kindly [dockerised AceWiki](https://hub.docker.com/r/tkuhn/acewiki/).
-
-* [docker cheat sheet](https://coderwall.com/p/2es5jw/docker-cheat-sheet-with-examples)
-* [15 docker tips](http://sssslide.com/speakerdeck.com/bmorearty/15-docker-tips-in-5-minutes)
-
-Initially one needs to *pull* the docker from the shared hub:
-
-```docker
-docker pull tkuhn/acewiki
-```
-
-then create a container:
-
-```docker
-docker run tkuhn/acewiki
-```
-
-Check out the container details
-
-```docker
-docker ps -all
-```
-
-
-http://172.17.0.3:9077/acewiki/
-
-# AceRules
-
-[Dr Tobias Kuhn](http://www.tkuhn.org/) developed AceRules as part of his PhD. He's kindly [dockerised AceRules](https://hub.docker.com/r/tkuhn/acerules/)
-
-
-	
-## Copying stuff to and from a docker instances
-
-### copying **from** docker
-
-docker cp <docker instance>:<source folder> <local target folder>
-
-Examples:
-
-To the current folder - 
-
-> docker cp serene_boyd:/AceWiki/data .
-
-To a specific folder
-> docker cp serene_boyd:/AceWiki/data /home/beckant/delme/Grr
-
-### copying **to** docker	
-
-# More docker
-
-docker pull tkuhn/acewiki
-docker start tkuhn/acewiki
-docker build tkuhn/acewiki
-docker ps -a
-docker images
-
-## getting a bash shell into docker
-
-docker start <docker instance>
-docker exec -i -t <docker instance> /bin/bash
-
-docker start serene_boyd
-docker exec -i -t serene_boyd /bin/bash
-
 
 
 Some text to use in these services:
