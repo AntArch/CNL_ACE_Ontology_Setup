@@ -6,6 +6,17 @@ ACE and its tools are intended for professionals who want to use formal notation
 
 ACE appears perfectly natural, but — being a controlled subset of English — is in fact a formal language. ACE texts are computer-processable and can be unambiguously translated into discourse representation structures, a syntactic variant of first-order logic. Discourse representation structures derived from ACE texts have been translated into various other languages, for instance into FOL, FLUX, RuleML, R2ML, TPTP, and a rule format to be used for Courteous Logic Programs and for stable model semantics. Using discourse representation structures as inter-lingua we have developed a bidirectional translation of ACE into and from OWL 2 and a translation into SWRL.
 
+Other systems:
+
+* [VOWL: Visual Notation for OWL Ontologies](http://vowl.visualdataweb.org/)
+	* not exactly CNL but a visual form of OWL representation
+* [Fluent editor](http://www.cognitum.eu/semantics/FluentEditor/Default.aspx)
+	* windows only
+* [Gellish](https://en.wikipedia.org/wiki/Gellish)
+* [CLOnE](https://gate.ac.uk/sale/iswc07/clone/clone.pdf)
+* [Amine platform](http://amine-platform.sourceforge.net/)
+
+
 ## Tools used
 
 A number of [tools have been developed for ACE](http://attempto.ifi.uzh.ch/site/tools/) (note there is a separate page from [tools and resources](http://attempto.ifi.uzh.ch/site/resources/). We will use a subset of these:

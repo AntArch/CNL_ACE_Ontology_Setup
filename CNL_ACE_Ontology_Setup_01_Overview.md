@@ -40,6 +40,15 @@ This Socratic sentence is easy to read and understand (whilst the question *What
 
 This is an example of [inference](https://en.wikipedia.org/wiki/Inference). The benefit comes when a computer can come to the same inference. This can be visualized in the [RACE (reasoning engine) web client](http://attempto.ifi.uzh.ch/race/) as demonstrated in the file AutomatedReasoningUsingRACE_whoIsMortal.mp4 in the video folder (put a link onto youtube).
 
+Complex [if-then rules and relationships](http://stackoverflow.com/questions/16496364/representing-if-then-sentence-using-owl) can be represented:
+
+```CNL
+Bob is a student. 
+If Bob has 5 dogs then Bob has at least 1 cat.
+```
+
+Good examples of[ complex ACE rules are here](http://eulergui.sourceforge.net/rules-examples.html).
+
 Further benefits come when moving from inferencing over a small number of facts to inferencing over hundreds, thousands or millions of facts. 
 
 We will use CNL to express short facts about the activities and functions of the business/enterprise. The major benefit is that these statements can be easily understood by domain experts and challenged. The things I'm looking for is moments where someone says....
