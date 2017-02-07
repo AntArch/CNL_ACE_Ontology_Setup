@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1411137630027" name="http://harmonisa.uni-klu.ac.at/ontology/corine.owl" uri="corine.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1411137630027" name="http://www.w3.org/2002/07/owl" uri="ACE_Owl.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1486135385959" name="http://harmonisa.uni-klu.ac.at/ontology/corine.owl" uri="corine.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1486135385959" name="http://www.w3.org/2002/07/owl" uri="ACE_Owl.owl"/>
     </group>
 </catalog>

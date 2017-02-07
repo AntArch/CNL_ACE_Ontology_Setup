@@ -42,12 +42,12 @@ This is an example of [inference](https://en.wikipedia.org/wiki/Inference). The 
 
 Further benefits come when moving from inferencing over a small number of facts to inferencing over hundreds, thousands or millions of facts. 
 
-We will use CNL to express short facts about the activities and functions of the business/enterprise. The major benefit for RoS is that these statements can be easily understood by domain experts and challenged. The things I'm looking for is moments where someone says....
+We will use CNL to express short facts about the activities and functions of the business/enterprise. The major benefit is that these statements can be easily understood by domain experts and challenged. The things I'm looking for is moments where someone says....
 
 > 'Hmm, well yes: that's mainly true. About 90% of the time that happens, but sometimes we need to do this.'
 
-This means that the transcription of knowledge becomes transparent and we can get an unambiguous understanding of enterprise activities at different granularities. 
+Such statements allow the model and language to be refined meaning that any resultant process is less of an abstraction and better reflects need. This ultimately means that the transcription of knowledge becomes transparent and we can get an unambiguous understanding of enterprise activities at different granularities. 
 
-I believe this is specifically important in the articulation of a *Ubiquitous Language* within Domain Driven Design. Ubiquitous Language is defined as followes by Wikipedia:
+I believe this is specifically important in the articulation of a *Ubiquitous Language* within Domain Driven Design. Ubiquitous Language is defined as follows by [Wikipedia](https://en.wikipedia.org/wiki/Domain-driven_design#Concepts):
 
 > A language structured around the domain model and used by all team members to connect all the activities of the team with the software.
