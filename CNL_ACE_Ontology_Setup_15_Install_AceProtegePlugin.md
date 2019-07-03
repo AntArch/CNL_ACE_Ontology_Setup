@@ -5,6 +5,7 @@ The ACE plugin is a fabulous tool, it integrates directly into [Protege](http://
 Unfortunately development of the Protege Ace Viewer has stalled and the only current version is available for protege version 4.3. However, it's not quite as simple as downloading and installing the plugin - time has moved on and things get broken. But all is not over. 
 
 * [Download and install Protege 4.3 for your preferred platform](http://protege.stanford.edu/download/protege/4.3/installanywhere/Web_Installers/)
+	* Don't use the install anywhere, use the zip install then follow the instructions below (you may need to install java manually)
 * In the folder */bin/* where you installed protege
 	* rename *felix.jar* to *felixOLD.jar*
 * from the *ProtegeJars* folders in this GitHub repository:
